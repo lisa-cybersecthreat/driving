@@ -1,3 +1,4 @@
+
 nav {
     background: var(--green);
     display: flex;
@@ -6,9 +7,12 @@ nav {
     padding: 0 1.5em;
     width: 100%;
     top: 0;
+    .menu {
+        display: flex;
+    }
     * {
         color: #fff;
-        padding: .5em;
+        // fill: #fff;
     }
     .navlink-div {
         display: flex;
@@ -16,7 +20,7 @@ nav {
         a, div {
             display: flex;
             align-items: center;
-            padding-left: 1em;
+            padding: 1em;
             &:hover {
                 color: var(--yellow);
                 * {
@@ -26,37 +30,168 @@ nav {
             align-self: flex-end;
         }
     }
-    .login-div {
-        &:hover {
-            background: var(--dark-green)
-        }
+    .login-div, .logo-div {
+        display: flex;
+        align-items: center;
     }
-    // section {
-    //     padding: .5em 1em;
-    // }
-  }
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    background-color: rgba(37,38,39,.7);
-    z-index: -1;
-    form {
-        background: #fff;
-        width: 60%;
-        max-width: 500px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9;
-        * {
-            color: navy
+    .login-div {
+        div {
+            padding: 0 .5em;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 50px;
+            &:hover {
+                background: var(--dark-green)
+            }
         }
+
+    }
+    img[alt*="logo"] {
+        width: 50px;
+        height: 50px;
+    }
+  }
+
+  .hamburger {
+    align-self: center;
+    background: transparent;
+    width: 50px;
+    height: 35px;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: .5em;
+    display: none;
+    span {
+        width: 100%;
+        height: 2px;
+        /* margin-bottom: 5px; */
+        /* position: relative; */
+        background: #fff;
+        border-radius: 2px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    }
+        
+
+        span:first-child
+        {
+        transform-origin: 0% 0%;
+        }
+
+        span:nth-last-child(2)
+        {
+        transform-origin: 0% 100%;
+        }
+
+        /* 
+        * Transform all the slices of hamburger
+        * into a crossmark.
+        */
+        input:checked ~ span
+        {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+        }
+
+        /*
+        * But let's hide the middle one.
+        */
+        input:checked ~ span:nth-last-child(3)
+        {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        /*
+        * Ohyeah and the last one should go the other direction
+        */
+        input:checked ~ span:nth-last-child(2)
+        {
+        transform: rotate(-45deg) translate(0, -1px);
+        }
+  }
+
+.menu
+{
+//   position: absolute;
+//   width: 300px;
+//   margin: -100px 0 0 -50px;
+//   padding: 50px;
+//   padding-top: 125px;
+  
+//   background: #ededed;
+//   list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+//   transform-origin: 0% 0%;
+//   transform: translate(-100%, 0);
+  
+//   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+/*
+ * And let's slide it in from the left
+ */
+// .hamburger input:checked ~ ul
+// {
+//   transform: none;
+// }
+
+
+
+
+  @media (max-width: 920px) {
+    nav {
+        position: absolute;
+        padding: 1em;
+        .menu {
+            display: none;
+            flex-direction: column-reverse;
+            /* background: navy; */
+            width: 100%;
+            padding: 9%;
+            justify-content: flex-end;
+        }
+        .login-div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 1em;
+        }
+      .close {
+          display: flex;
+    align-self: flex-end;
+    width: 30px;
+    height: 30px;
+    // border: none;
+    &:before, &:after {
+        background-color: #fff;
+    }
+      }
+      .logo-div {
+        //   display: none;
+      }
+      .navlink-div {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
+        margin-left: unset;
+          a {
+            border: 1px solid olive;
+            display: flex;
+            flex-direction: column;
+          }
+          svg {
+              font-size: 3.5em;
+          }
+      }
+    }
+    .hamburger {
+        display: flex;
     }
   }
