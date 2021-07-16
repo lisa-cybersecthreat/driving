@@ -1,0 +1,48 @@
+:root {
+  --red: #b81d13;
+  --yellow: #efb700;
+  --green: #008450;
+  --dark-green: #006b41;
+}
+
+$red: #b81d13;
+$yellow: #efb700;
+$green: #008450;
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.web-wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid navy;
+  margin-top: 90px;
+  height: 100vh;
+}
+
+// classList
+.active-link {
+  color: var(--yellow);
+  * {
+    fill: var(--yellow)
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
