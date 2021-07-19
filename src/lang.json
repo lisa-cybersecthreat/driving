@@ -1,0 +1,23 @@
+{
+    "nav_home": {
+        "en": "home",
+        "zh": "首頁"
+    },
+    "nav_application": {
+        "en": "Apply for test",
+        "zh": "新手報名"
+    },
+    "nav_coach": {
+        "en":"Find an instructor",
+        "zh": "教練"
+    },
+    "nav_retake": {
+        "en": "re-take",
+        "zh": "重考速成班"
+    },
+    "nav_course": {
+        "en":"courses",
+        "zh": "課程"
+    }
+
+}

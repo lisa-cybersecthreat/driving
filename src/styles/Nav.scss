@@ -7,11 +7,13 @@ nav {
     padding: 0 1.5em;
     width: 100%;
     top: 0;
+    z-index: 99999;
     .menu {
         display: flex;
     }
     * {
         color: #fff;
+        text-transform: capitalize;
         // fill: #fff;
     }
     .navlink-div {
@@ -41,7 +43,7 @@ nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 50px;
+            min-width: 60px;
             &:hover {
                 background: var(--dark-green)
             }
@@ -51,6 +53,9 @@ nav {
     img[alt*="logo"] {
         width: 50px;
         height: 50px;
+    }
+    svg {
+        margin-right: .5em;
     }
   }
 
@@ -147,7 +152,7 @@ nav {
 
 
 
-  @media (max-width: 920px) {
+  @media (max-width: 1024px) {
     nav {
         position: absolute;
         padding: 1em;
@@ -156,7 +161,7 @@ nav {
             flex-direction: column-reverse;
             /* background: navy; */
             width: 100%;
-            padding: 9%;
+            // padding: 9%;
             justify-content: flex-end;
         }
         .login-div {
@@ -165,14 +170,15 @@ nav {
             padding: 1em;
         }
       .close {
-          display: flex;
-    align-self: flex-end;
-    width: 30px;
-    height: 30px;
-    // border: none;
-    &:before, &:after {
-        background-color: #fff;
-    }
+        display: flex;
+        align-self: flex-end;
+        width: 50px;
+        height: 50px;
+        // border: none;
+        &:before, &:after {
+            background-color: #fff;
+            left: 50%;
+        }
       }
       .logo-div {
         //   display: none;
@@ -182,14 +188,24 @@ nav {
         grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
         margin-left: unset;
           a {
+            // border: 1px solid olive;
+            // display: flex;
+            // flex-direction: column;
+          }
+      }
+        .login-div, .navlink-div {
+            padding: 5% 9%;
+        }
+        .login-div div, .navlink-div a {
             border: 1px solid olive;
             display: flex;
             flex-direction: column;
-          }
-          svg {
-              font-size: 3.5em;
-          }
-      }
+        }
+        svg {
+            font-size: 3.5em;
+            margin-bottom: .15em;
+            margin-right: 0;
+        }
     }
     .hamburger {
         display: flex;

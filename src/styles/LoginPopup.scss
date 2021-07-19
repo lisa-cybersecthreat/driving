@@ -15,7 +15,7 @@
     form {
         background: #fff;
         width: 60%;
-        max-width: 350px;
+        max-width: 370px;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -52,6 +52,9 @@
             background: var(--green);
             color: #fff;
             border: none;
+        }
+        .title, input[type="submit"] {
+          text-transform: uppercase;
         }
     }
     a {
