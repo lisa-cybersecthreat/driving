@@ -20,7 +20,7 @@ function DrivingKing () {
                     <Nav/>
                     <div className="web-wrapper">
                         <Switch>
-                            <Route exact path="/" component={()=><Home/>} />
+                            <Route exact path="/driving" component={()=><Home/>} />
                             <Route exact path="/application" component={()=><Application />}/>  
                             <Route exact path="/coach" component={()=><Coach/>}/>        
                             <Route exact path="/retake" component={()=><Retake/>} />     

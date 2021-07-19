@@ -57,7 +57,7 @@ function Nav () {
                 
                 <section className="menu" style={{display: isDropDown&& "flex"}}>
                     <div className="navlink-div">
-                        <NavLink exact to="/" activeClassName="active-link">
+                        <NavLink exact to="/driving" activeClassName="active-link">
                             <AiOutlineHome/>{isEng? "home" : "首頁"}
                         </NavLink> 
                         <NavLink exact to="/application" activeClassName="active-link">
