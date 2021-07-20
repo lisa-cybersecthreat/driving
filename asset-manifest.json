@@ -1,29 +1,32 @@
 {
   "files": {
-    "main.css": "/driving/static/css/main.58fb8070.chunk.css",
-    "main.js": "/driving/static/js/main.4d61a264.chunk.js",
-    "main.js.map": "/driving/static/js/main.4d61a264.chunk.js.map",
-    "runtime-main.js": "/driving/static/js/runtime-main.e703737c.js",
-    "runtime-main.js.map": "/driving/static/js/runtime-main.e703737c.js.map",
+    "main.css": "/driving/static/css/main.c009cbe2.chunk.css",
+    "main.js": "/driving/static/js/main.c8be6db5.chunk.js",
+    "main.js.map": "/driving/static/js/main.c8be6db5.chunk.js.map",
+    "runtime-main.js": "/driving/static/js/runtime-main.18e020dd.js",
+    "runtime-main.js.map": "/driving/static/js/runtime-main.18e020dd.js.map",
     "static/css/2.12638096.chunk.css": "/driving/static/css/2.12638096.chunk.css",
-    "static/js/2.8c603d95.chunk.js": "/driving/static/js/2.8c603d95.chunk.js",
-    "static/js/2.8c603d95.chunk.js.map": "/driving/static/js/2.8c603d95.chunk.js.map",
-    "static/js/3.8d10e3c3.chunk.js": "/driving/static/js/3.8d10e3c3.chunk.js",
-    "static/js/3.8d10e3c3.chunk.js.map": "/driving/static/js/3.8d10e3c3.chunk.js.map",
+    "static/js/2.3bc39f15.chunk.js": "/driving/static/js/2.3bc39f15.chunk.js",
+    "static/js/2.3bc39f15.chunk.js.map": "/driving/static/js/2.3bc39f15.chunk.js.map",
+    "static/js/3.74d84418.chunk.js": "/driving/static/js/3.74d84418.chunk.js",
+    "static/js/3.74d84418.chunk.js.map": "/driving/static/js/3.74d84418.chunk.js.map",
     "index.html": "/driving/index.html",
     "static/css/2.12638096.chunk.css.map": "/driving/static/css/2.12638096.chunk.css.map",
-    "static/css/main.58fb8070.chunk.css.map": "/driving/static/css/main.58fb8070.chunk.css.map",
-    "static/js/2.8c603d95.chunk.js.LICENSE.txt": "/driving/static/js/2.8c603d95.chunk.js.LICENSE.txt",
+    "static/css/main.c009cbe2.chunk.css.map": "/driving/static/css/main.c009cbe2.chunk.css.map",
+    "static/js/2.3bc39f15.chunk.js.LICENSE.txt": "/driving/static/js/2.3bc39f15.chunk.js.LICENSE.txt",
     "static/media/car.289b15aa.jpg": "/driving/static/media/car.289b15aa.jpg",
     "static/media/cars.f929f60c.jpg": "/driving/static/media/cars.f929f60c.jpg",
+    "static/media/filling-application-form.01473a88.jpg": "/driving/static/media/filling-application-form.01473a88.jpg",
     "static/media/gps.78b80ff2.jpg": "/driving/static/media/gps.78b80ff2.jpg",
-    "static/media/logo.988cd3b5.png": "/driving/static/media/logo.988cd3b5.png"
+    "static/media/guys-sitting-car.c158dc2a.jpg": "/driving/static/media/guys-sitting-car.c158dc2a.jpg",
+    "static/media/logo.988cd3b5.png": "/driving/static/media/logo.988cd3b5.png",
+    "static/media/using-digital-tablet-smartphone.c705c2e8.jpg": "/driving/static/media/using-digital-tablet-smartphone.c705c2e8.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e703737c.js",
+    "static/js/runtime-main.18e020dd.js",
     "static/css/2.12638096.chunk.css",
-    "static/js/2.8c603d95.chunk.js",
-    "static/css/main.58fb8070.chunk.css",
-    "static/js/main.4d61a264.chunk.js"
+    "static/js/2.3bc39f15.chunk.js",
+    "static/css/main.c009cbe2.chunk.css",
+    "static/js/main.c8be6db5.chunk.js"
   ]
 }
