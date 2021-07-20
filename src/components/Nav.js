@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {NavLink} from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+
 import {AiOutlineHome} from 'react-icons/ai';
 import {BsPencilSquare} from 'react-icons/bs';
 import {IoPeopleOutline, IoLanguageOutline} from 'react-icons/io5'
@@ -10,18 +12,29 @@ import {FaRegUserCircle} from 'react-icons/fa'
 import '../styles/Nav.scss'
 import LoginPopup from './LoginPopup';
 import logo from "../images/logo.png";
-import jsonlang from "../lang.json";
 
-function Nav () {
+function Nav (props) {
     const [isOpenLogin, setIsOpenLogin] = useState(false)
     const [isEng, setIsEng] = useState(false)
     const [isDropDown, setIsDropDown] = useState(false)
+
+    // const { i18n } = useTranslation();
+    // const [selectedLang, setSelectedLang] = useState("zh");
+    const { t, i18n } = useTranslation()
 
     const clickLoginBtn = (e) => setIsOpenLogin(!isOpenLogin)
 
     const clickOverlay = (e) => setIsOpenLogin(false)
 
     const clickLan = () => setIsEng(!isEng)
+
+    const changeLanguage = (event) => {
+        i18n.changeLanguage(event.target.value)
+      }
+    // useEffect(()=>{
+    //     var language=isEng? "en":"zh"
+    //     setLanguage("en")
+    // }, [isEng])
 
     const clickHamburger = () => setIsDropDown(!isDropDown)
     const closeDropDown = () => setIsDropDown(false)
@@ -57,7 +70,7 @@ function Nav () {
                 
                 <section className="menu" style={{display: isDropDown&& "flex"}}>
                     <div className="navlink-div">
-                        <NavLink exact to="/driving" activeClassName="active-link">
+                        <NavLink exact to="/" activeClassName="active-link">
                             <AiOutlineHome/>{isEng? "home" : "首頁"}
                         </NavLink> 
                         <NavLink exact to="/application" activeClassName="active-link">
@@ -77,6 +90,10 @@ function Nav () {
                         <div onClick={clickLoginBtn}><FaRegUserCircle />{isEng? "login/register" :"登入 / 註冊"}</div>
                         <div onClick={clickLan}><IoLanguageOutline/>{isEng ? "Eng" : "文"}</div>
                     </div>   
+                    <div onChange={changeLanguage}>
+      <input type="radio" value="en" name="language" defaultChecked /> English
+      <input type="radio" value="zh-hk" name="language"/> Traditional Chinese
+    </div>
                     {/* <button className="hamburger">
                             <span></span>
                             <span></span>

@@ -12,6 +12,7 @@ $green: #008450;
 body, html {
   margin: 0;
   padding: 0;
+  background-color: #f5fafd;
 }
 
 * {
@@ -26,7 +27,7 @@ a {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  border: 1px solid navy;
+  // border: 1px solid navy;
   margin-top: 90px;
   height: 100vh;
 }
@@ -37,6 +38,24 @@ a {
   * {
     fill: var(--yellow)
   }
+}
+
+.img-wrapper{
+  // border: 1px solid olive;
+  position: relative;
+  overflow: hidden;
+      &::after {
+          content: "";
+          display: block;
+          padding-top: 50%;
+      }
+      img {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
 }
 
 
