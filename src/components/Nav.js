@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {NavLink} from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 import {AiOutlineHome} from 'react-icons/ai';
@@ -18,31 +18,30 @@ function Nav (props) {
     const [isEng, setIsEng] = useState(false)
     const [isDropDown, setIsDropDown] = useState(false)
 
-    // const { i18n } = useTranslation();
-    // const [selectedLang, setSelectedLang] = useState("zh");
-    const { t, i18n } = useTranslation()
+    const history=useHistory()
+
+    const { t, i18n } = useTranslation();
 
     const clickLoginBtn = (e) => setIsOpenLogin(!isOpenLogin)
 
     const clickOverlay = (e) => setIsOpenLogin(false)
 
-    const clickLan = () => setIsEng(!isEng)
+    const clickLan = () => {
+        setIsEng(!isEng)
+    }
 
-    const changeLanguage = (event) => {
-        i18n.changeLanguage(event.target.value)
-      }
-    // useEffect(()=>{
-    //     var language=isEng? "en":"zh"
-    //     setLanguage("en")
-    // }, [isEng])
+    useEffect(()=>{
+        i18n.changeLanguage(isEng? "en":"zh")
+
+        const language = isEng? "en":"zh"
+        history.push(`?lang=${language}`)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isEng])
 
     const clickHamburger = () => setIsDropDown(!isDropDown)
     const closeDropDown = () => setIsDropDown(false)
 
-    const onSubmit = (e) => {
-        e.preventDefault()
-        console.log(e)
-    }
+    const onSubmit = (e) => e.preventDefault()
     
     // // const url ="http://testapp.net/api/teacher-showall";
     // const url=" https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-5740FC70-095E-4152-B9D0-9F8CD9EEFCC2"
@@ -57,21 +56,19 @@ function Nav (props) {
         <>
             <nav>
                 <section className="logo-div">
-                    {
-                        !isDropDown  && <><img src={logo} alt="logo"/>學開車</>
-                    }
-                    
+                {/* <b>{t('HELLO_WORLD')}</b> */}
+                    { !isDropDown  && <><img src={logo} alt="logo"/>學開車</> }
                 </section>
                 {!isDropDown && <button className="hamburger" onClick={clickHamburger}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span></span><span></span><span></span>
                 </button>  }
                 
                 <section className="menu" style={{display: isDropDown&& "flex"}}>
                     <div className="navlink-div">
                         <NavLink exact to="/" activeClassName="active-link">
                             <AiOutlineHome/>{isEng? "home" : "首頁"}
+                            
+                            {/* <AiOutlineHome/>{t("nav_home")} */}
                         </NavLink> 
                         <NavLink exact to="/application" activeClassName="active-link">
                                 <BsPencilSquare />{isEng? "Apply for test" : "新手報名"}
@@ -90,15 +87,6 @@ function Nav (props) {
                         <div onClick={clickLoginBtn}><FaRegUserCircle />{isEng? "login/register" :"登入 / 註冊"}</div>
                         <div onClick={clickLan}><IoLanguageOutline/>{isEng ? "Eng" : "文"}</div>
                     </div>   
-                    <div onChange={changeLanguage}>
-      <input type="radio" value="en" name="language" defaultChecked /> English
-      <input type="radio" value="zh-hk" name="language"/> Traditional Chinese
-    </div>
-                    {/* <button className="hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                    </button>                  */}
                     {isDropDown && <button className="close" onClick={closeDropDown}></button>}
                     
                 </section>

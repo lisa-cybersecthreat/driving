@@ -1,7 +1,12 @@
 {
+
     "nav_home": "首頁",
     "nav_application": "新手報名",
     "nav_coach": "教練",
     "nav_retake": "重考速成班",
-    "nav_course": "課程"
+    "nav_course": "課程",
+    "new_application": "新手報名",
+    "new_application_desc" : "線上簡單快速報名",
+    "new_application_link" : "馬上報名",
 }
+

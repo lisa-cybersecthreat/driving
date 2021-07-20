@@ -5,7 +5,6 @@ import {
     Route,
     Switch
 } from "react-router-dom";
-
 import Nav from "./Nav";
 import Home from "./Home";
 import Application from './Application';
@@ -13,7 +12,7 @@ import Coach from './Coach';
 import Retake from './Retake';
 import Course from './Course';
 
-function DrivingKing () {
+function DrivingKing (props) {
     return(
         <div>
             <Router basename="/">

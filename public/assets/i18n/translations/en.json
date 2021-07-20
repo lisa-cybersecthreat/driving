@@ -1,7 +1,13 @@
+
+
 {
-    "nav_home": "home",
-    "nav_application": "Apply for test",
-    "nav_coach": "Find an instructor",
-    "nav_retake": "re-take",
-    "nav_course": "courses"
+        "nav_home": "home",
+        "nav_application": "Apply for test",
+        "nav_coach": "Find an instructor",
+        "nav_retake": "re-take",
+        "nav_course": "courses",
+        "new_application": "Apply for Driving Test",
+        "new_application_desc" : "Online registration is simple and fast",
+        "new_application_link" : "Sign up now",  
 }
+  
