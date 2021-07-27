@@ -50,10 +50,6 @@ nav {
         }
 
     }
-    img[alt*="logo"] {
-        width: 50px;
-        height: 50px;
-    }
     svg {
         margin-right: .5em;
     }
@@ -152,9 +148,9 @@ nav {
 
 
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1250px) {
     nav {
-        position: absolute;
+        position: fixed;
         padding: 1em;
         .menu {
             display: none;
@@ -179,9 +175,6 @@ nav {
             background-color: #fff;
             left: 50%;
         }
-      }
-      .logo-div {
-        //   display: none;
       }
       .navlink-div {
         display: grid;

@@ -3,6 +3,8 @@
   --yellow: #efb700;
   --green: #008450;
   --dark-green: #006b41;
+  --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --swiper-theme-color: lightgrey !important;
 }
 
 $red: #b81d13;
@@ -23,13 +25,22 @@ a {
   text-decoration: none;
 }
 
+img[alt*="logo"] {
+  width: 50px;
+  height: 50px;
+}
+.logo-div {
+  display: flex;
+  align-items: center;
+}
+
 .web-wrapper {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
   // border: 1px solid navy;
   margin-top: 90px;
-  height: 100vh;
+  // height: 100vh;
 }
 
 // classList
@@ -38,6 +49,10 @@ a {
   * {
     fill: var(--yellow)
   }
+}
+
+.block {
+  display: block;
 }
 
 .img-wrapper{
@@ -56,6 +71,40 @@ a {
           left: 50%;
           transform: translate(-50%, -50%);
       }
+}
+
+footer {
+  padding: 1.5em;
+  text-align: center;
+  .icon {
+    display: none;
+  }
+  .web-wrapper {
+    margin: 1.5em auto 2.5em auto;
+    display: flex;
+    justify-content: space-evenly;
+    * {
+      margin: .5em 0;
+      text-transform: capitalize;
+      color: grey;
+    }
+  }
+  span {
+    color: grey;
+  }
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: grey;
+    }    
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+  }
 }
 
 

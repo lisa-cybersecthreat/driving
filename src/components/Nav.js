@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {NavLink, useHistory} from "react-router-dom";
+import React, { useContext, useEffect, useState } from 'react';
+import {NavLink} from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 import {AiOutlineHome} from 'react-icons/ai';
@@ -13,49 +13,92 @@ import '../styles/Nav.scss'
 import LoginPopup from './LoginPopup';
 import logo from "../images/logo.png";
 
-function Nav (props) {
-    const [isOpenLogin, setIsOpenLogin] = useState(false)
-    const [isEng, setIsEng] = useState(false)
-    const [isDropDown, setIsDropDown] = useState(false)
+import { InitContext } from '../contexts/InitContext';
 
-    const history=useHistory()
+function Nav (props) {
+    const {
+        isEng, setIsEng 
+    } = useContext(InitContext)
+    const [isOpenLogin, setIsOpenLogin] = useState(false)
+    // const [isEng, setIsEng] = useState(false)
+    const [isDropDown, setIsDropDown] = useState(false)
+    const [registData, setRegistData] = useState({
+        "name": "lisa.wang",
+        "email": "lisa.wang@cybersecthreat.com",
+        "mobile": "0908117599",
+        "role": "student",
+        "password": "12",
+        "password_confirm": "12"
+    })
 
     const { t, i18n } = useTranslation();
-
-    const clickLoginBtn = (e) => setIsOpenLogin(!isOpenLogin)
-
-    const clickOverlay = (e) => setIsOpenLogin(false)
-
-    const clickLan = () => {
-        setIsEng(!isEng)
-    }
-
-    useEffect(()=>{
-        i18n.changeLanguage(isEng? "en":"zh")
-
-        const language = isEng? "en":"zh"
-        history.push(`?lang=${language}`)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isEng])
 
     const clickHamburger = () => setIsDropDown(!isDropDown)
     const closeDropDown = () => setIsDropDown(false)
 
-    const onSubmit = (e) => e.preventDefault()
+    const clickLoginBtn = (e) => {
+        closeDropDown()
+        setIsOpenLogin(!isOpenLogin)
+    }
+
+    const clickOverlay = (e) => setIsOpenLogin(false)
+
+    const clickLan = () => {
+        closeDropDown()
+        setIsEng(!isEng)
+    }
+
+    useEffect(()=>{
+        const lng = isEng? "en":"zh"
+        i18n.changeLanguage(lng)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isEng])
+
+
+
+    const onChange = (e) => {
+        setRegistData({...registData, [e.target.name] : e.target.value})  
+    }
+
+    const onSubmit = async(e) => {
+        e.preventDefault()
+        var numberPattern = /\d+/g;
+
+        if(registData.password_confirm !== registData.password) {
+            alert("password not matching")
+            // registData.password_confirm.setCustomValidity("Passwords Don't Match")
+        } else {
+            setRegistData({...registData, "mobile": registData.mobile.match(numberPattern).join("")})  
+            
+            fetch("http://www.testapp.net/api/register", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                }, 
+                body: JSON.stringify({
+                    "name": "lisa.wang",
+                    "email": "lisa.wang@cybersecthreat.com",
+                    "mobile": "0908117599",
+                    "role": "student",
+                    "password": "12",
+                    "password_confirm": "12"
+                })
+            })
+            .then(res=>res.json())
+            .then(data=> {
+                console.log(data)
+            })
+            .catch(err => console.error(err))
+        }
+    }
     
-    // // const url ="http://testapp.net/api/teacher-showall";
-    // const url=" https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-5740FC70-095E-4152-B9D0-9F8CD9EEFCC2"
-    // fetch(url,{
-    //     mode: 'cors'
-    // })
-    // .then(res => res.json())
-    // .then( data => console.log(data))
-    // .catch( err => console.log(err))
 
     return(
         <>
             <nav>
+                
                 <section className="logo-div">
+                <button onClick={onSubmit}>fetch test</button>
                 {/* <b>{t('HELLO_WORLD')}</b> */}
                     { !isDropDown  && <><img src={logo} alt="logo"/>學開車</> }
                 </section>
@@ -65,37 +108,37 @@ function Nav (props) {
                 
                 <section className="menu" style={{display: isDropDown&& "flex"}}>
                     <div className="navlink-div">
-                        <NavLink exact to="/" activeClassName="active-link">
-                            <AiOutlineHome/>{isEng? "home" : "首頁"}
-                            
-                            {/* <AiOutlineHome/>{t("nav_home")} */}
+                        <NavLink exact to="/" activeClassName="active-link" onClick={closeDropDown}>
+                            <AiOutlineHome/>{t("home")}
                         </NavLink> 
-                        <NavLink exact to="/application" activeClassName="active-link">
-                                <BsPencilSquare />{isEng? "Apply for test" : "新手報名"}
+                        <NavLink exact to="/application" activeClassName="active-link" onClick={closeDropDown}>
+                                <BsPencilSquare />{t("new_application")}
                         </NavLink>
-                        <NavLink exact to="/coach" activeClassName="active-link">
-                            <IoPeopleOutline/>{isEng? "Find an instructor" : "教練"}
+                        <NavLink exact to="/coach" activeClassName="active-link" onClick={closeDropDown}>
+                            <IoPeopleOutline/>{t("coach")}
                         </NavLink>
-                        <NavLink exact to="/retake" activeClassName="active-link" >
-                            <BiCalendarPlus/>{isEng? "re-take lessons" : "重考速成班"}
+                        <NavLink exact to="/retake" activeClassName="active-link" onClick={closeDropDown} >
+                            <BiCalendarPlus/>{t("retake_lessons")}
                         </NavLink>
-                        <NavLink exact to="/course" activeClassName="active-link" >
-                            <GiCartwheel/>{isEng? "our courses" : "我們的課程"}
+                        <NavLink exact to="/course" activeClassName="active-link" onClick={closeDropDown} >
+                            <GiCartwheel/>{t("our_courses")}
                         </NavLink>
                     </div>    
                     <div className="login-div">
-                        <div onClick={clickLoginBtn}><FaRegUserCircle />{isEng? "login/register" :"登入 / 註冊"}</div>
+                        <div onClick={clickLoginBtn}><FaRegUserCircle />{t("login_register")}</div>
                         <div onClick={clickLan}><IoLanguageOutline/>{isEng ? "Eng" : "文"}</div>
                     </div>   
-                    {isDropDown && <button className="close" onClick={closeDropDown}></button>}
-                    
+                    {isDropDown && <button className="close" onClick={closeDropDown} ></button>}    
                 </section>
             </nav>        
             {
                     isOpenLogin && 
                     <LoginPopup 
-                        lan={isEng? "en" : "zh"}
+                        t={t}
+                        // lan={isEng? "en" : "zh"}
                         clickOverlay={clickOverlay} 
+                        registData={registData}
+                        onChange={onChange}
                         onSubmit={onSubmit}
                     />
                 }

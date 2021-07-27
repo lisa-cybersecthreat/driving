@@ -41,12 +41,15 @@
             border: 1px solid grey;
             &::-webkit-input-placeholder { /* Edge */
                 font-size: 16px;
+                color: lightblue
             }
             &:-ms-input-placeholder { /* Internet Explorer 10-11 */
             font-size: 16px;
+            color: lightblue
             }
             &::placeholder {
             font-size: 16px;
+            color: lightblue
             }
         }
         input[type="submit"] {

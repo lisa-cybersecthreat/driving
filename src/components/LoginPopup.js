@@ -1,59 +1,51 @@
 import { useEffect, useState } from 'react'
 import '../styles/LoginPopup.scss'
 function LoginPopup(props) {
-    const [lang, setLang] = useState({
-        title: {
-            en: "login/register",
-            zh: "登入 / 註冊"
-        },
-        desc: {
-            en: "In order to contact you in time and protect the security of account information, the system will send a verification code to confirm that the phone number is correct",
-            zh: "為使客服能夠及時與你聯絡，同時保護帳戶資料安全，系統將發送驗證碼以確認電話號碼正確"
-        },
-        phone: {
-            en: "mobile number",
-            zh: "手機號碼"
-        },
-        submit: {
-            en: "next",
-            zh: "下一步"
-        },
-        p: {
-            en: "do not have moible number?",
-            zh: "沒有手機號碼？"
-        },
-        link: {
-            en: "contact with us",
-            zh: "與我們連絡"
-        }
-    })
 
-
+    // var url = "http://www.testapp.net/api/home/1";
+    // // var url = "http://www.testapp.net/login";
+    // // var url = "https://sjkcboibmh.execute-api.us-east-1.amazonaws.com/UserAuthentication"
     // useEffect(() => {
-    //     const lang_en={
-    //         "title": "login/register",
-    //         "desc" : "In order to contact you in time and protect the security of account information, the system will send a verification code to confirm that the phone number is correct"   
-    //     }
-    //     const lang_zh={
-    //         "title": "登入 / 註冊",
-    //         "desc" : "為使客服能夠及時與你聯絡，同時保護帳戶資料安全，系統將發送驗證碼以確認電話號碼正確"
-    //     }  
-    //     setLang(props.isEng===true ? lang_en : lang_zh)
+    //     fetch(url, {
+    //         // method: "POST",
+    //         // headers: {
+    //         //     'Content-Type': 'application/json'
+    //         //     // 'Content-Type': 'application/x-www-form-urlencoded',
+    //         //   },
+    //         // body: JSON.stringify({
+    //         //     "userid": "123" ,
+    //         //     "password" :"123"
+    //         // })
+    //     })
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         console.log(data)
+    //     })
+    //     .catch(err => console.log(err))
+    // }, [])
 
-    // },[props.isEng])
-    
-    
 
     return (
         <div className="login-popup">
             <div className="overlay" onClick={props.clickOverlay}></div>
-            <form onSubmit={props.onSubmit}>
+            <form onSubmit={props.onSubmit}  action="/action_page.php">
                 <button className="close" onClick={props.clickOverlay}></button>
-                <p className="title">{props.lan==="en" ? lang.title.en : lang.title.zh }</p>
-                <p>{props.lan==="en" ? lang.desc.en : lang.desc.zh }</p>
-                <input type="tel" id="phone" name="phone" placeholder={props.lan==="en" ? lang.phone.en : lang.phone.zh } pattern="[0-9]{10}" required></input>
-                <input type="submit" value={props.lan==="en" ? lang.title.en : lang.title.zh } />
-                <p>{props.lan==="en" ? lang.p.en : lang.p.zh }<a href="#">{props.lan==="en" ? lang.link.en : lang.link.zh } {">>"}</a></p>
+                <p>{props.t("login_register")}</p>
+                <p>{props.t("popup_desc")}</p>
+                <input type="text" name="name" placeholder="name" onChange={props.onChange} />
+                <input type="email" id="email" name="email" placeholder="email" required onChange={props.onChange} />
+                <label htmlFor="mobile" />
+                <input id="mobile" type="tel" name="mobile" placeholder="mobile number" onChange={props.onChange} required pattern="^[0-9-+\s()]*$"/>
+                <label>role:
+                    <select name="role" id="role" onChange={props.onChange}>
+                        <option value="student">student</option>
+                        <option value="teacher">teacher</option>
+                    </select>
+                </label>
+                <input type="password" name="password" placeholder="password" onChange={props.onChange} required autoComplete="off" />
+                <input type="password" name="password_confirm" placeholder="confirm password" onChange={props.onChange} required autoComplete="off" />
+                <input type="submit" value={props.t("next")} onSubmit={props.onSubmit}/>
+                <p>{props.t("no_mobile")}<a href="#">{props.t("contact_with_us")} {">>"}</a></p>
             </form>                       
         </div>        
 )
