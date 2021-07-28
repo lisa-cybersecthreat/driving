@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/driving/static/css/main.090e15f5.chunk.css",
-    "main.js": "/driving/static/js/main.e598c4cc.chunk.js",
-    "main.js.map": "/driving/static/js/main.e598c4cc.chunk.js.map",
+    "main.css": "/driving/static/css/main.6113db1d.chunk.css",
+    "main.js": "/driving/static/js/main.650246f3.chunk.js",
+    "main.js.map": "/driving/static/js/main.650246f3.chunk.js.map",
     "runtime-main.js": "/driving/static/js/runtime-main.9b2c586a.js",
     "runtime-main.js.map": "/driving/static/js/runtime-main.9b2c586a.js.map",
     "static/css/2.12638096.chunk.css": "/driving/static/css/2.12638096.chunk.css",
@@ -12,14 +12,13 @@
     "static/js/3.df663029.chunk.js.map": "/driving/static/js/3.df663029.chunk.js.map",
     "index.html": "/driving/index.html",
     "static/css/2.12638096.chunk.css.map": "/driving/static/css/2.12638096.chunk.css.map",
-    "static/css/main.090e15f5.chunk.css.map": "/driving/static/css/main.090e15f5.chunk.css.map",
+    "static/css/main.6113db1d.chunk.css.map": "/driving/static/css/main.6113db1d.chunk.css.map",
     "static/js/2.da87afca.chunk.js.LICENSE.txt": "/driving/static/js/2.da87afca.chunk.js.LICENSE.txt",
     "static/media/bus.38ced5a0.png": "/driving/static/media/bus.38ced5a0.png",
-    "static/media/car.7fadadb6.jpg": "/driving/static/media/car.7fadadb6.jpg",
+    "static/media/car.a099b4b4.jpg": "/driving/static/media/car.a099b4b4.jpg",
     "static/media/cargo_truck.51fc36b4.png": "/driving/static/media/cargo_truck.51fc36b4.png",
-    "static/media/driving_school.c7e26820.jpg": "/driving/static/media/driving_school.c7e26820.jpg",
-    "static/media/filling-application-form.77b84efe.jpg": "/driving/static/media/filling-application-form.77b84efe.jpg",
-    "static/media/gps.238723b7.jpg": "/driving/static/media/gps.238723b7.jpg",
+    "static/media/driving_school.65853456.jpg": "/driving/static/media/driving_school.65853456.jpg",
+    "static/media/gps.2dbe5e0e.jpg": "/driving/static/media/gps.2dbe5e0e.jpg",
     "static/media/guys-sitting-car.c158dc2a.jpg": "/driving/static/media/guys-sitting-car.c158dc2a.jpg",
     "static/media/how_many_classes.aa9a496a.jpg": "/driving/static/media/how_many_classes.aa9a496a.jpg",
     "static/media/how_much_tuition.0fe9a91b.jpg": "/driving/static/media/how_much_tuition.0fe9a91b.jpg",
@@ -37,7 +36,7 @@
     "static/js/runtime-main.9b2c586a.js",
     "static/css/2.12638096.chunk.css",
     "static/js/2.da87afca.chunk.js",
-    "static/css/main.090e15f5.chunk.css",
-    "static/js/main.e598c4cc.chunk.js"
+    "static/css/main.6113db1d.chunk.css",
+    "static/js/main.650246f3.chunk.js"
   ]
 }
