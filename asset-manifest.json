@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/driving/static/css/main.80ecaefa.chunk.css",
-    "main.js": "/driving/static/js/main.a24da4b0.chunk.js",
-    "main.js.map": "/driving/static/js/main.a24da4b0.chunk.js.map",
-    "runtime-main.js": "/driving/static/js/runtime-main.9b2c586a.js",
-    "runtime-main.js.map": "/driving/static/js/runtime-main.9b2c586a.js.map",
+    "main.css": "/driving/static/css/main.9101588f.chunk.css",
+    "main.js": "/driving/static/js/main.ef7bd8a9.chunk.js",
+    "main.js.map": "/driving/static/js/main.ef7bd8a9.chunk.js.map",
+    "runtime-main.js": "/driving/static/js/runtime-main.3f607b81.js",
+    "runtime-main.js.map": "/driving/static/js/runtime-main.3f607b81.js.map",
     "static/css/2.12638096.chunk.css": "/driving/static/css/2.12638096.chunk.css",
-    "static/js/2.6cea7b9d.chunk.js": "/driving/static/js/2.6cea7b9d.chunk.js",
-    "static/js/2.6cea7b9d.chunk.js.map": "/driving/static/js/2.6cea7b9d.chunk.js.map",
-    "static/js/3.df663029.chunk.js": "/driving/static/js/3.df663029.chunk.js",
-    "static/js/3.df663029.chunk.js.map": "/driving/static/js/3.df663029.chunk.js.map",
+    "static/js/2.6cd5646b.chunk.js": "/driving/static/js/2.6cd5646b.chunk.js",
+    "static/js/2.6cd5646b.chunk.js.map": "/driving/static/js/2.6cd5646b.chunk.js.map",
+    "static/js/3.5e7af474.chunk.js": "/driving/static/js/3.5e7af474.chunk.js",
+    "static/js/3.5e7af474.chunk.js.map": "/driving/static/js/3.5e7af474.chunk.js.map",
     "index.html": "/driving/index.html",
     "static/css/2.12638096.chunk.css.map": "/driving/static/css/2.12638096.chunk.css.map",
-    "static/css/main.80ecaefa.chunk.css.map": "/driving/static/css/main.80ecaefa.chunk.css.map",
-    "static/js/2.6cea7b9d.chunk.js.LICENSE.txt": "/driving/static/js/2.6cea7b9d.chunk.js.LICENSE.txt",
+    "static/css/main.9101588f.chunk.css.map": "/driving/static/css/main.9101588f.chunk.css.map",
+    "static/js/2.6cd5646b.chunk.js.LICENSE.txt": "/driving/static/js/2.6cd5646b.chunk.js.LICENSE.txt",
     "static/media/bus.38ced5a0.png": "/driving/static/media/bus.38ced5a0.png",
     "static/media/car.a099b4b4.jpg": "/driving/static/media/car.a099b4b4.jpg",
     "static/media/cargo_truck.51fc36b4.png": "/driving/static/media/cargo_truck.51fc36b4.png",
@@ -33,10 +33,10 @@
     "static/media/where_location.9dcd5d28.jpg": "/driving/static/media/where_location.9dcd5d28.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9b2c586a.js",
+    "static/js/runtime-main.3f607b81.js",
     "static/css/2.12638096.chunk.css",
-    "static/js/2.6cea7b9d.chunk.js",
-    "static/css/main.80ecaefa.chunk.css",
-    "static/js/main.a24da4b0.chunk.js"
+    "static/js/2.6cd5646b.chunk.js",
+    "static/css/main.9101588f.chunk.css",
+    "static/js/main.ef7bd8a9.chunk.js"
   ]
 }
