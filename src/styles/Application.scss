@@ -1,0 +1,75 @@
+#Application {
+    background-color: navy;
+    label{
+        width: 100%
+    }
+    form {
+        width: 100%;
+        padding: 1.5em 9%;
+        textarea {
+            margin-bottom: 1em;
+        }
+    }
+    .various-cars-sec {
+        width: 100%;
+        margin-bottom: .5em;
+        .div-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: .5em;
+            grid-auto-rows: 1fr;
+            .card {
+                border: 1px solid lightgrey !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                text-align: center;
+                pointer-events: none;
+                &:hover {
+                    border-color: var(--green);
+                }
+                &:active, &:focus, &:visited, &:target {
+                    border-color: var(--green);
+                    background-color: #d8e6dd;
+                }
+                p:nth-of-type(2) {
+                    display: none;
+                }
+                img {
+                    width: 90%;
+                }
+                p {
+                    margin: 0
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    #Application {
+        .various-cars-sec {
+            .div-wrapper {
+                // display: flex;
+                // flex-wrap: wrap;
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                .card {
+                    padding: 0 .5em;
+                    // min-width: 120px;
+                    flex-direction: row-reverse;
+                    img {
+                        width: 30%;
+                    }
+                }                
+            }
+
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .various-cars-sec .div-wrapper .card p {
+        font-size: 12px;
+    }
+}

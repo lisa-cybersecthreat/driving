@@ -1,0 +1,33 @@
+#Coach {
+    .img-wrapper::after {
+        padding-top: 30%;
+    }
+    .search-bar-div {
+        margin: 1em 0;
+        display: flex;
+        input[type="submit"] {
+            width: 120px;
+            border: 1px solid var(--green);
+            font-size: 16px;
+            text-transform: uppercase;
+        }        
+        .filter-btn {
+            background: var(--yellow);
+            border-color: var(--yellow) !important;
+            color: #fff;
+        }
+        form {
+            flex-direction: row;
+            padding: 0;
+            margin-right: .5em;
+            input {
+                margin: 0
+            }
+        }
+    }
+    .coach-card {
+        background: #fff;
+        box-shadow: var(--box-shadow);
+        padding: 1em 1.5em;
+    }
+}

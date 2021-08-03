@@ -1,12 +1,12 @@
 function EachCarCard (props) {
     return(
-        <div className="card">
+        <a href="#" className="card" onClick={props.onClick}>
             <div>
                 <p>{props.title}</p>
                 <p>{props.courses}</p>                
             </div>
             <img src={props.img_src} alt={props.title} width="120px" />
-        </div>
+        </a>
     )
 }
 

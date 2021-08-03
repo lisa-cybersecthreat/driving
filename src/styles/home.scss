@@ -1,4 +1,6 @@
 #home {
+    display: flex;
+    flex-direction: column;
     h1, h2, h3 {
         text-transform: uppercase;
     }
@@ -33,7 +35,7 @@
                 height: 100%;
             }
             .img-wrapper::after {
-                padding-top: 75%;
+                padding-top: 65%;
             }
             .img-wrapper::before {
                 content: "";
@@ -52,11 +54,14 @@
             .arrow {
                 display: none;
             }
+            .link-box {
+                width: 72%;
+            }
         }
     }
     .why-us-sec {
         background: #fff;
-        padding: 1em;
+        padding: 1em 1.5em;
         box-shadow: var(--box-shadow);
         .grid-5 {
             display: grid;
@@ -109,70 +114,11 @@
             }
         }
     }
-    .cards-div-4 {
-        display: grid;
-        // grid-template-columns: repeat(auto-fill, minMax(350px, 1fr));
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1em;
-        .card {
-            background: #fff;
-            box-shadow: var(--box-shadow);
-            padding: 1em 1.5em;
-            .img-wrapper {
-                display: none;
-            }
-            .info-div {
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-                h3 {
-                    margin-right: .15em;
-                }
-                a {
-                    width: 135px;
-                    text-align: center;
-                    margin-left: auto;
-                }
-                .arrow {
-                    display: none;
-                }
-
-            }
-        }
-
-    }
-    .qna_cars_div_4 {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1em;
-        .simpleCard {
-            position: relative;
-            box-shadow: var(--box-shadow);
-            .img-wrapper {
-                border-radius: 9px;
-            }
-            .text-div {
-                background: rgba(0,0,0,.3);
-                width: 76%;
-                position: absolute;
-                z-index: 99;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center
-            }
-            p {
-                color: #fff;
-            }
-            svg {
-                display: none;
-            }
-        }
-    }
     .free_simulated_test_section {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        background: #fff;
         box-shadow: var(--box-shadow);
         flex-wrap: wrap;
         padding: 1em;
@@ -183,6 +129,7 @@
         .link-box {
             width: fit-content;
             margin: 0;
+            min-width: 100px;
         }
     }
     .student-feedback-section {
@@ -190,31 +137,38 @@
         box-shadow: var(--box-shadow);
         padding: 1.5em 0;
         position: relative;
-        .swiper-slide:nth-of-type(1) {
-            margin-left: 5em;
+        background-repeat: no-repeat;
+        .swiper-slide {
+            min-width: 292px;
+            &:nth-of-type(1) {
+                margin-left: 5em;
+            }
         }
+        // .swiper-slide:nth-of-type(1) {
+        //     margin-left: 5em;
+        // }
         div[class*="button"]::after {
             font-size: 1.6em;
             font-weight: 900;
         }
-        .pencil {
-            font-size: 5em;
-            color: lightgrey;
+        img[alt="message"] {
             position: absolute;
-            top: 0;
-            left: 0;
+            opacity: .5;
+            margin-left: 1.5em;
         }
-        .text-div {
-            display: flex;
-            align-items: center;
-            margin-left: 5em;
+        h1 {
+            margin-left: 15%;
+            position: relative;
+            span {
+                font-size: 20px;
+                font-weight: 200;
+                color: grey;
+            }
         }
         .student-feedback-card {
-            border: 1px solid lightgrey;
+            border: 1px solid grey;
             padding: 1em 1.5em;
-            * {
-                color: lightgrey;
-            }
+            background: #fff;
             .text {
                 color: grey;
                 overflow: hidden;
@@ -225,6 +179,7 @@
             }
             .tel {
                 display: flex;
+                align-items: center;
                 svg {
                     margin-right: .5em;
                     fill: var(--green);
@@ -254,12 +209,12 @@
     .contact-us-section {
         background: #fff;
         box-shadow: var(--box-shadow);
-        padding: 1em;
+        padding: 1.5em;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         .slogan-div {
-            width: 60%;
+            width: calc(100% - 300px - 5%);
             span {
                 font-size: 16px;
                 color: grey;
@@ -271,6 +226,7 @@
         }
         iframe {
             width: 35%;
+            min-width: 300px;
             border: none;
         }
     }
@@ -290,8 +246,134 @@
             margin-bottom: 2.5px;
         }
     }
+    .success-list-section {
+        background: #fff;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1.5em;
+        p {
+            margin: 0;
+        }
+        .left-div {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h1 {
+                font-size: 2.5em;
+                font-weight: 900;
+                margin: 0;
+            }
+        }
+        .right-div {
+            width: 62%;
+            display: flex;
+            flex-direction: column;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 50px !important;
+            div[class*="button"] {
+                display: none;
+            }
+            .swiper-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                // flex-direction: row;
+                // flex-wrap: wrap;
+            }
+            .swiper-slide {
+                // border: 1px solid olive;
+                height: 50px !important;
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg {
+                    font-size: 2.5em;
+                    fill: var(--red);
+                }
+                p {
+                    text-align: center;
+                }
+                .pass {
+                    color: var(--red);
+                    font-size: 1.5em;
+                    font-weight: 900;
+                }
+            }
+        }
+
+    }
+}
+
+.cards-div-4 {
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, minMax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    .card {
+        background: #fff;
+        box-shadow: var(--box-shadow);
+        padding: 1em 1.5em;
+        .img-wrapper {
+            display: none;
+        }
+        .info-div {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            h3 {
+                margin-right: .15em;
+            }
+            a {
+                // width: 135px;
+                text-align: center;
+                margin-left: auto;
+                .link-box {
+                    margin-right: 0;
+                }
+            }
+            .arrow {
+                display: none;
+            }
+
+        }
+    }
 
 }
+.qna_cars_div_4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    .simpleCard {
+        position: relative;
+        box-shadow: var(--box-shadow);
+        .img-wrapper {
+            border-radius: 9px;
+        }
+        .text-div {
+            background: rgba(0,0,0,.3);
+            width: 76%;
+            position: absolute;
+            z-index: 99;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center
+        }
+        p {
+            color: #fff;
+            margin: 0;
+        }
+        svg {
+            display: none;
+        }
+    }
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -301,7 +383,7 @@
 // }
 
 #home:lang(en) {
-    .student-feedback-section, .qna-section {
+    .student-feedback-section, .success-list-section {
         display: none;
     }
     .contact-us-section {
@@ -316,12 +398,18 @@
             .info-div{
                 display: flex;
                 flex-direction: column;
+                /* background: navy; */
+                height: 100%;
+                justify-content: space-between;
+                text-align: center;
                 h3 {
                   margin: 0;
                 }
             }  
             .link-box {
                 width: unset;
+                min-width: 135px;
+                text-transform: capitalize;
             }     
             a {
                 margin: unset;
@@ -336,9 +424,6 @@
     #home {
         .cards-div-4 {
             .info-div {
-                // display: grid;
-                // grid-template-columns: 1fr 1fr;
-                // grid-template-rows: 1fr 1fr;
                 justify-content: center;
                 * {
                     margin: .15em;
@@ -347,13 +432,16 @@
                     margin: 0 auto !important;
                     display: contents;
                 }
+                .link-box {
+                    color: #fff;
+                    background: var(--green);
+                }
             }
-
         }
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 750px) {    
     #home {
         .cards-div-3 {
             flex-direction: column;
@@ -366,10 +454,14 @@
                 // display: grid;
                 // grid-template-columns: 1fr 1fr;
                 // grid-auto-flow: dense;
+                &:nth-of-type(3){
+                    margin-bottom: 0;
+                }
                 .img-wrapper {
-                    width: 120px;
+                    width: 200px;
                     &::before {
                         display: block;
+                        border-top: 110px solid #fff;
                     }
                 }
                 .info-div {
@@ -387,6 +479,7 @@
                     h3 {
                         width: 100%;
                         text-align: left;
+                        margin-bottom: .5em;
                     }
                     * {
                         margin: 0
@@ -402,34 +495,114 @@
                 }
             }
         }  
-        .qna_cars_div_4 {
-            grid-template-columns: repeat(2, 1fr);
-            background: #fff;
-            .simpleCard {
-                .img-wrapper {
-                    display: none;
-                }
-                .text-div {
-                    background: transparent;
-                    position: unset;
-                    top: unset;
-                    left: unset;
-                    transform: unset;
-                    display: flex;
-                    align-items: center;
-                }
-                svg {
-                    display: block;
-                    fill: darkgrey;
-                    font-size: 2em;
-                    margin-right: .5em;
-                }
-                p {
-                    color: var(--green)
-                }
+        .success-list-section {
+            padding: 1.5em 0;
+            .left-div {
+                width: 25%;
+                h1 {
+                    font-size: 1.2em;
+                }                
             }
-        }        
+            .right-div {
+                width: 69%;
+                .swiper-wrapper {
+                    grid-template-columns: 1fr 1fr !important;
+                }                
+            }
+        }
+        .cards-div-4 {
+            .card .info-div{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .free_simulated_test_section {
+            // background: #fff;
+        }
+        .contact-us-section {
+            .slogan-div, iframe {
+                width: 100%;
+            }
+        }
+        .student-feedback-section {
+            // background: unset;
+            // box-shadow: unset;
+            .swiper-slide {
+                background: #fff;
+            }
+            .swiper-slide:nth-of-type(1) {
+                margin-left: 15%;
+            }
+        }
     }
+    .qna_cars_div_4 {
+        // margin: 3.1em 0;
+        // grid-template-columns: repeat(2, 1fr);
+        // background: #fff;
+        .simpleCard {
+            // background: #fff;
+            box-shadow: unset;
+            .img-wrapper {
+                display: none;
+            }
+            .text-div {
+                background: transparent;
+                position: unset;
+                top: unset;
+                left: unset;
+                transform: unset;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                /* display: flex; */
+                justify-content: center;
+                flex-direction: column;
+            }
+            // .svg-wrapper {
+                // background: var(--green);
+                // padding: .5em;
+                // border-radius: 50%;
+                // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                svg {
+                    background: var(--green);
+                    padding: .5em;
+                    border-radius: 50%;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    display: block;
+                    fill: #fff;
+                    font-size: 2em;
+                    box-sizing: unset;
+                }              
+            // }
+            p {
+                // color: var(--green);
+                // margin: 1.5em 0;
+                margin: .5em 0;
+                color: grey;
+                // font-size: 12px;
+            }
+            // &:nth-of-type(2) .svg-wrapper {
+            //     background: var(--red);
+            // }
+            // &:nth-of-type(3) .svg-wrapper {
+            //     background: var(--yellow)
+            // }
+            // &:nth-of-type(4) .svg-wrapper {
+            //     background: olive;
+            // }
+            &:nth-of-type(2) svg {
+                background: var(--red);
+            }
+            &:nth-of-type(3) svg {
+                background: var(--yellow)
+            }
+            &:nth-of-type(4) svg {
+                background: olive;
+            }
+        }
+    }  
+
     footer {
         padding: 0;
        .web-wrapper {
@@ -441,6 +614,11 @@
             }
             li {
                 margin: 0;
+                &:nth-of-type(1) {
+                    .menu-item {
+                        border-top: 1px solid lightgrey;
+                    }
+                }
             }
             .menu-item {
                 display: flex;
@@ -463,22 +641,66 @@
 
 
         } 
+        
+        .copyright {
+            font-size: 12px;
+            color: grey;
+            text-align: center;
+            span {
+                display: block;
+            }
+        }
     }
 }
 
 @media (max-width: 520px) {
-    #home .contact-us-section {
-        .slogan-div, iframe {
-            width: 100%;
+    .link-box {
+        width: unset !important;
+    }
+    #home .why-us-sec {
+        position: relative;
+        .grid-5 {
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        }
+        li{
+            display: flex;
+            flex-direction: column;
+            svg {
+                margin-right: 0;
+                path[fill-rule="evenodd"]{
+                    color: transparent;
+                }
+            }
+            p {
+                margin-top: 0;
+            }
+        }        
+        .learn-more {
+            position: absolute;
+            top: 1em;
+            right: 2em;
+            margin-top: 9px;
+            a {
+                flex-direction: row-reverse;
+            }
+            p {
+                margin: 0
+            }
         }
     }
+    .qna_cars_div_4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    #home .cards-div-4 .card {
+        padding: 1em 0;     
+    }
     
 }
 
 .link-box {
     border: 1px solid var(--green);
-    width: 75%;
+    min-width: 65%;
     margin: 0 auto;
     padding: .5em 1em;
     color: var(--green);

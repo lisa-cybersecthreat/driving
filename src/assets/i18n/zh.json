@@ -2,6 +2,7 @@
       "retake_lessons": "重考速成班",
       "our_courses": "我們的課程",
       "login_register": "登入 / 註冊",
+      "name": "姓名",
       "mobile_number": "手機號碼",
       "next": "下一步",
       "no_mobile": "沒有手機號碼？",
@@ -54,54 +55,63 @@
       "free_simulated_test_desc": "500道試題，1 take pass 無難度",
       "practice_now": "開始練習",
       "student_feedback_1": {
+        "name": "",
         "text": "報考簡單方便，程序處理有效率，考期快，有禮貌，Good! ",
         "tel":"0922235223",
         "date": "23/07/2021",
         "location": "台北市"
       },
       "student_feedback_2": {
+        "name": "",
         "text": "平台使用簡單清晰，跟進學員十分貼心到位，所以相當滿意",
         "tel":"0908225253",
         "date": "25/09/2020",
         "location": "新北市"
       },
       "student_feedback_3": {
+        "name": "",
         "text": "方便易用，客服有禮友善，有需要時亦能快速提供支援",
         "tel":"0906255255",
         "date": "2/12/2021",
         "location": "台中市"
       },
       "student_feedback_4": {
+        "name": "",
         "text": "滿意服務，平台回覆問題非常快，有跟進問題，臨近考試前還會提醒學員要準備的事項.",
         "tel":"0922523523",
         "date": "25/5/2021",
         "location": "新北市"
       },
       "student_feedback_5": {
+        "name": "",
         "text": "緊貼學車人士考試進度，處理快而且態度好！",
         "tel":"0937283929",
         "date": "9/2/2021",
         "location": "桃園市"
       },
       "student_feedback_6": {
+        "name": "",
         "text": "學車王是一個好好嘅平台，能夠解答我好多問題，有問必答！值答稱贊嘅地方！同埋平台都好方便，由報名考筆試到考完路試，都唔多洗自己搞，好方便",
         "tel":"0989920302",
         "date": "28/3/2020",
         "location": "高雄市"
       },
       "student_feedback_7": {
+        "name": "",
         "text": "滿意學車王平台的服務，會推薦俾家人朋友。",
         "tel":"0986285892",
         "date": "12/2/2021",
         "location": "台北市"
       },
       "student_feedback_8": {
+        "name": "",
         "text": "很好，平台中有很多師傅可供學生根據要求選擇，也有提供考試片段參考。客服也有禮貌，滿意。",
         "tel":"0939292832",
         "date": "20/06/2021",
         "location": "新北市"
       },
       "student_feedback_9": {
+        "name": "",
         "text": "感謝學車王客服的幫助，不厭其煩，回覆速度快，樂意認真為學生解決問題。",
         "tel":"0922323216",
         "date": "16/07/2021",
@@ -111,6 +121,59 @@
       "slogan_desc": "提供汽車學習資訊、筆試模擬、私人教練課程、複試等多種服務。 我們選擇與台灣優質私人教練合作，為學員提供優質的學習課程，幫助學員學習駕駛技術，輕鬆考取駕照！",
       "learn_drive_license": "考駕照",
       "learn_mustknow": "學開車需知",
-      "simulated_test": "模擬測試"
-    
+      "simulated_test": "模擬測試",
+      "hot_qna": "熱門提問 Q & A",
+      "qna": {
+        "q1":{
+          "text": "2021年台灣平均學費及程序介紹？如何最省錢？",
+          "url" : "#"
+        },
+        "q2":{
+          "text": "筆試流程？如何準備筆試？筆試心得及攻略？",
+          "url" : "#"
+        },
+        "q3":{
+          "text": "如何選擇？自小客車或輕型貨車？",
+          "url" : "#"
+        },
+        "q4":{
+          "text": "比較費用及通過率？",
+          "url" : "#"
+        },
+        "q5":{
+          "text": "路試之前一般要上幾個小時？",
+          "url" : "#"
+        },
+        "q6":{
+          "text": "學車最快何時拿到駕照？哪裡考試日期最快？",
+          "url" : "#"
+        },
+        "q7":{
+          "text": "學車收費有何不同？",
+          "url" : "#"
+        },
+        "q8":{
+          "text": "日期安排，彃性選課？",
+          "url" : "#"
+        },
+        "q9":{
+          "text": "考試路試地點？",
+          "url" : "#"
+        }
+      },
+      "join_our_team": "加入我們",
+      "congrat_students_pass": "恭喜下面同學考試合格！",
+      "application" : {
+        "take_a_minute_for_feedback": "請花一分鐘填寫下面資料，教練會儘快回覆你^^"
+      },
+      "choose_location": "選擇您的地區",
+      "choose_cartype": "選擇車型",
+      "search": "搜尋",
+      "search_coach": "搜尋師傅",
+      "filter": "篩選",
+      "mustknow": "考試須知",
+      "remark": "備註",
+      "eligibility_register": "報名資格",
+      "physical_exam_instuct": "體檢須知",
+      "note_exam": "考照須知"
     }

@@ -28,7 +28,8 @@ export default function FooterButton () {
                 <FooterMenuItem t={t} />
                 <FooterMenuItem t={t} />
             </div>
-            Copyright © 2020-2021 LearnToDrive Limited. All Rights Reserved. <span>版權所有 不得轉載</span>
+            <p className="copyright">Copyright © 2020-2021 LearnToDrive Limited. All Rights Reserved. <span>版權所有 不得轉載</span></p>
+            
         </footer>            
     )
 }

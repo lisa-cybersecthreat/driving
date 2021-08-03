@@ -2,13 +2,17 @@ function SimpleCard (props) {
     
     return(
     <div className="simpleCard">
-        <div className="img-wrapper">
-            <img src={props.img_src} alt={props.text}/>
-        </div>
-        <div className="text-div">
-            {props.icon}
-            <p>{props.text}</p>            
-        </div>
+        <a href="#">
+            <div className="img-wrapper">
+                <img src={props.img_src} alt={props.text}/>
+            </div>
+            <div className="text-div">
+                {/* <div className="svg-wrapper"> */}
+                   {props.icon} 
+                {/* </div> */}
+                <p>{props.text}</p>            
+            </div>
+        </a>
     </div>
     )
 }

@@ -2,6 +2,7 @@
     "home": "home",
     "retake_lessons": "re-take lessons",
     "our_courses": "our courses",
+    "name": "name",
     "login_register": "login/register",
     "popup_desc": "In order to contact you in time and protect the security of account information, the system will send a verification code to confirm that the phone number is correct",
     "mobile_number": "mobile number",
@@ -54,9 +55,126 @@
     "where_location": "where is the location?",
     "free_simulated_test_desc": "500 sample tests, 1 take pass is no difficulty",
     "practice_now": "practice now",
+        "student_feedback_1": {
+        "name": "",
+        "text": "",
+        "tel":"0922235223",
+        "date": "23/07/2021",
+        "location": ""
+      },
+      "student_feedback_2": {
+        "name": "",
+        "text": "",
+        "tel":"0908225253",
+        "date": "25/09/2020",
+        "location": ""
+      },
+      "student_feedback_3": {
+        "name": "",
+        "text": "",
+        "tel":"0906255255",
+        "date": "2/12/2021",
+        "location": ""
+      },
+      "student_feedback_4": {
+        "name": "",
+        "text": "",
+        "tel":"0922523523",
+        "date": "25/5/2021",
+        "location": ""
+      },
+      "student_feedback_5": {
+        "name": "",
+        "text": "",
+        "tel":"0937283929",
+        "date": "9/2/2021",
+        "location": ""
+      },
+      "student_feedback_6": {
+        "name": "",
+        "text": "",
+        "tel":"0989920302",
+        "date": "28/3/2020",
+        "location": ""
+      },
+      "student_feedback_7": {
+        "name": "",
+        "text": "",
+        "tel":"0986285892",
+        "date": "12/2/2021",
+        "location": ""
+      },
+      "student_feedback_8": {
+        "name": "",
+        "text": "",
+        "tel":"0939292832",
+        "date": "20/06/2021",
+        "location": ""
+      },
+      "student_feedback_9": {
+        "name": "",
+        "text": "",
+        "tel":"0922323216",
+        "date": "16/07/2021",
+        "location": ""
+      },
     "slogan": "One-stop platform for learning to drive in Taiwan",
     "slogan_desc": "Provide various services such as car learning information, written simulation test, privateinstructor course, and re-exam. We chooses to cooperate with high-quality private instructors in Tawain to provide students with high-quality learning courses to help students learn driving skills and easily obtain license!",
     "learn_drive_license": "get drving license",
     "learn_mustknow": "must know",
-    "simulated_test": "simulated test"
+    "simulated_test": "simulated test",
+    "hot_qna": "Popular Questions Q & A",
+    "qna": {
+      "q1":{
+        "text": "Introduction to Taiwan’s average tuition fees and procedures in 2021? How to save the most money?",
+        "url" : "#"
+      },
+      "q2":{
+        "text": "What is the written examination process? How to prepare for the written test? Written test experience and strategy?",
+        "url" : "#"
+      },
+      "q3":{
+        "text": "how to choose? private car or a light truck?",
+        "url" : "#"
+      },
+      "q4":{
+        "text": "Compare fees and pass rates?",
+        "url" : "#"
+      },
+      "q5":{
+        "text": "How many hours does it take before the road test?",
+        "url" : "#"
+      },
+      "q6":{
+        "text": "When is the fastest way to get a driver's license? Where is the fastest test date?",
+        "url" : "#"
+      },
+      "q7":{
+        "text": "What is the difference between the tuition fees?",
+        "url" : "#"
+      },
+      "q8":{
+        "text": "schedule arrangement, flexible course selection?",
+        "url" : "#"
+      },
+      "q9":{
+        "text": "Where to take the road test?",
+        "url" : "#"
+      },
+      "join_our_team": "join our team",
+      "congrat_students_pass": "Congratulations to the students below for passing the exam!"
+    },
+    "application" : {
+      "take_a_minute_for_feedback": "Please take a minute to fill in the information below, so that the coach can respond to you faster ^^"
+    },
+    "choose_location": "choose your location",
+    "choose_cartype": "choose car type",
+    "search": "search",
+    "search_coach": "search for coach",
+    "filter": "filter",
+    "mustknow": "Q and A",
+    "remark": "remark",
+    "eligibility_register": "Eligibility for registration",
+    "physical_exam_instuct": "Physical Examination Instructions",
+    "note_exam": "Notes for examination"
   }

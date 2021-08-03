@@ -1,14 +1,15 @@
 import './App.scss';
 import DrivingWebsite from './components/DrivingWebsite';
-import { useTranslation, Trans } from 'react-i18next';
+// import { useTranslation, Trans } from 'react-i18next';
 import { InitProvider } from './contexts/InitContext';
+import { FunctionPrivider } from './contexts/functionContext';
 
 function App() {
-  const lngs = {
-    en: { nativeName: 'English' },
-    zh: { nativeName: 'Deutsch' }
-  };
-  const { t, i18n } = useTranslation();
+  // const lngs = {
+  //   en: { nativeName: 'English' },
+  //   zh: { nativeName: 'Deutsch' }
+  // };
+  // const { t, i18n } = useTranslation();
 
   return (
     <div className="App">
@@ -25,7 +26,9 @@ function App() {
           <h1>{t('description.part2')}</h1>
           </div> */}
           <InitProvider>
-            <DrivingWebsite />
+            {/* <FunctionPrivider> */}
+              <DrivingWebsite />
+            {/* </FunctionPrivider> */}
           </InitProvider>
     </div>
   );
