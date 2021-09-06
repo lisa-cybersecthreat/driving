@@ -2,7 +2,7 @@ function SimpleCard (props) {
     
     return(
     <div className="simpleCard">
-        <a href="#">
+        <a href={props.src}>
             <div className="img-wrapper">
                 <img src={props.img_src} alt={props.text}/>
             </div>

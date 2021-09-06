@@ -52,33 +52,36 @@ import VariousCarsSec from './home/VariousCarsSec';
 
 
 function Home (props) {
-    const { isEng, setIsEng, apiOrigin } = useContext(InitContext)
+    const { isEng, setIsEng, apiOrigin, apiArticles } = useContext(InitContext)
     const { t, i18n } = useTranslation();
     SwiperCore.use([Pagination,Navigation, Autoplay]);
 
-    var url = `${apiOrigin}/api/teachers`;
+    // var url = `${apiOrigin}/home`;
     // var url="http://localhost:9000/todos" 
     // var url = "https://sjkcboibmh.execute-api.us-east-1.amazonaws.com/UserAuthentication"
-    useEffect(() => {
-        fetch(url, {
-            // method: "GET",
-            // headers: {
-            //     'Content-Type': 'text/html',
-            // }
-        })
-        .then(res => {
-            res.json();
-            console.log(res)
-            console.log(res.headers.get('Content-Type'));
-        })
-        .then(data => {
-            console.log(data)
-            // console.log(data[0].mobile)
-            // console.log(typeof(data))
-        })
-        .catch(err => console.error(err))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    // useEffect(() => {
+    //     fetch(apiArticles, {
+    //         // method: "GET",
+    //         // headers: {
+    //         //     'Content-Type': 'text/html',
+    //         // }
+    //     })
+    //     // .then(res => {
+    //     //     console.log(res)
+    //     //     console.log(res.headers.get('Content-Type'));
+    //     //     return res.json()
+    //     // })
+    //     .then(res=>res.json())
+    //     .then(data => {
+    //         console.log(data)
+    //         // console.log(data[0].mobile)
+    //         // console.log(typeof(data))
+    //     })
+    //     .catch(err => console.error(err))
+    // // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [])
+
+
 
     return(
         <main id="home" lang={isEng? "en" : "zh"}>
@@ -116,17 +119,6 @@ function Home (props) {
                 </div>
             </section>
             <VariousCarsSec t={t} />
-            {/* <section className="various-cars-sec" >
-                    <div className="div-wrapper">
-                        <EachCarCard title={t("private_car")} img_src={private_car} courses={t("courses")}/>
-                        <EachCarCard title={t("van")} img_src={van} courses={t("courses")}/>
-                        <EachCarCard title={t("motorcycle")} img_src={motorcycle} courses={t("courses")}/>
-                        <EachCarCard title={t("scooter")} img_src={scooter} courses={t("courses")}/>
-                        <EachCarCard title={t("taxi")} img_src={taxi} courses={t("courses")}/>
-                        <EachCarCard title={t("bus")} img_src={bus} courses={t("courses")}/>
-                        <EachCarCard title={t("cargo_truck")} img_src={cargo_truck} courses={t("courses")}/>                    
-                    </div>       
-            </section> */}
             <WhyUsSec t={t}/>
             <section className="student-feedback-section" >
                 <img src={message} alt="message" />

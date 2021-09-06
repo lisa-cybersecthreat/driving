@@ -13,13 +13,13 @@ export default function VariousCarsSec(props) {
     return(
         <section className="various-cars-sec" >
             <div className="div-wrapper">
-                <EachCarCard onClick={props.onClick} title={props.t("private_car")} img_src={private_car} courses={props.t("courses")}/>
-                <EachCarCard onClick={props.onClick} title={props.t("van")} img_src={van} courses={props.t("courses")}/>
-                <EachCarCard onClick={props.onClick} title={props.t("motorcycle")} img_src={motorcycle} courses={props.t("courses")}/>
-                <EachCarCard onClick={props.onClick} title={props.t("scooter")} img_src={scooter} courses={props.t("courses")}/>
-                <EachCarCard onClick={props.onClick} title={props.t("taxi")} img_src={taxi} courses={props.t("courses")}/>
-                <EachCarCard onClick={props.onClick} title={props.t("bus")} img_src={bus} courses={props.t("courses")}/>
-                <EachCarCard onClick={props.onClick} title={props.t("cargo_truck")} img_src={cargo_truck} courses={props.t("courses")}/>                    
+                <EachCarCard title={props.t("private_car")} img_src={private_car} courses={props.t("courses")}/>
+                <EachCarCard title={props.t("van")} img_src={van} courses={props.t("courses")}/>
+                <EachCarCard title={props.t("motorcycle")} img_src={motorcycle} courses={props.t("courses")}/>
+                <EachCarCard title={props.t("scooter")} img_src={scooter} courses={props.t("courses")}/>
+                <EachCarCard title={props.t("taxi")} img_src={taxi} courses={props.t("courses")}/>
+                <EachCarCard title={props.t("bus")} img_src={bus} courses={props.t("courses")}/>
+                <EachCarCard title={props.t("cargo_truck")} img_src={cargo_truck} courses={props.t("courses")}/>                    
             </div>       
         </section>
     )

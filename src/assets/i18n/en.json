@@ -3,7 +3,8 @@
     "retake_lessons": "re-take lessons",
     "our_courses": "our courses",
     "name": "name",
-    "login_register": "login/register",
+    "login": "login",
+    "register": "register",
     "popup_desc": "In order to contact you in time and protect the security of account information, the system will send a verification code to confirm that the phone number is correct",
     "mobile_number": "mobile number",
     "next": "next",
@@ -127,39 +128,39 @@
     "qna": {
       "q1":{
         "text": "Introduction to Taiwan’s average tuition fees and procedures in 2021? How to save the most money?",
-        "url" : "#"
+        "url" : "mustknow"
       },
       "q2":{
         "text": "What is the written examination process? How to prepare for the written test? Written test experience and strategy?",
-        "url" : "#"
+        "url" : "mustknow"
       },
       "q3":{
         "text": "how to choose? private car or a light truck?",
-        "url" : "#"
+        "url" : "mustknow"
       },
       "q4":{
         "text": "Compare fees and pass rates?",
-        "url" : "#"
+        "url" : "mustknow"
       },
       "q5":{
         "text": "How many hours does it take before the road test?",
-        "url" : "#"
+        "url" : "mustknow"
       },
       "q6":{
         "text": "When is the fastest way to get a driver's license? Where is the fastest test date?",
-        "url" : "#"
+        "url" : "mustknow"
       },
       "q7":{
         "text": "What is the difference between the tuition fees?",
-        "url" : "#"
+        "url" : "mustknow"
       },
       "q8":{
         "text": "schedule arrangement, flexible course selection?",
-        "url" : "#"
+        "url" : "mustknow"
       },
       "q9":{
         "text": "Where to take the road test?",
-        "url" : "#"
+        "url" : "mustknow"
       },
       "join_our_team": "join our team",
       "congrat_students_pass": "Congratulations to the students below for passing the exam!"
@@ -174,7 +175,34 @@
     "filter": "filter",
     "mustknow": "Q and A",
     "remark": "remark",
-    "eligibility_register": "Eligibility for registration",
+    "eligibility_exam": {
+      "text": "Eligibility for exam",
+      "detail": [ 
+        "At least 18 years old", 
+        "People of the country: Holders of an ID card from the Republic of China.",  
+        "Large heavy aircraft must be over 20 years old and have a regular heavy aircraft driver's license for more than one year.",
+        "Ordinary heavy machinery must be over 18 years old.",
+        "Foreigners and overseas Chinese: those who have been approved to stay or stay for more than one year (such as alien residence permit)",
+        "Mainland Chinese (mainland spouse): Attach a certificate of permission to stay or stay for more than one year, At the same time, a certificate of staying in this entry for more than three months should be attached at the same time.",
+        "Foreign spouse: attach a certificate of stay or residence for more than one year with permission (such as alien residence permit, national ID card)",
+        "Hong Kong and Macau residents: attach a one-year public residence certificate (such as a residence permit in Taiwan)"
+      ]
+    },
     "physical_exam_instuct": "Physical Examination Instructions",
-    "note_exam": "Notes for examination"
+    "note_exam": "Notes for examination",
+    "physical_exam_instruction" : {
+      "text": "Physical Examination Instructions",
+      "detail": [
+        "Please bring the following documents for medical examination:",
+        "Identity card or residence permit with permission to stay for more than one year (both are originals).",
+        "In the last six months, a total of 6 photos with clear facial features and one-inch frontal (2 physical examinations were handed to us and 4).",
+        "ID card, health insurance card. (Dual ID)",
+        "Car medical examination form."
+      ]
+    },
+    "online_test": "Online practice theory tests",
+    "writing_texting": "writing testing samples",
+    "alert_success": "submit successfully",
+    "duplicate mobile": "duplicate mobile",
+    "duplicate email": "duplicate email"
   }

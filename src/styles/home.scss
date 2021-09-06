@@ -44,7 +44,7 @@
                 height: 0;
                 border-top: 70px solid #fff;
                 border-right: 35px solid transparent;
-                z-index: 9;
+                z-index: 1;
                 position: absolute;
                 display: none;
             }
@@ -364,10 +364,6 @@
             transform: translate(-50%, -50%);
             text-align: center
         }
-        p {
-            color: #fff;
-            margin: 0;
-        }
         svg {
             display: none;
         }
@@ -417,7 +413,11 @@
         }
 
     }
+}
 
+.simpleCard p {
+    color: #fff !important;
+    margin: 0;
 }
 
 @media (max-width: 1020px) {

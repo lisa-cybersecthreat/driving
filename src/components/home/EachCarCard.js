@@ -1,6 +1,15 @@
+import { useState } from "react";
+
 function EachCarCard (props) {
+    const [selected, setSelected] = useState(false)
+
+    const onClick = (e) => {
+        e.preventDefault();
+        setSelected(!selected)
+    }
+
     return(
-        <a href="#" className="card" onClick={props.onClick}>
+        <a href="#" onClick={onClick} className={selected? "selected card" : "card"}>
             <div>
                 <p>{props.title}</p>
                 <p>{props.courses}</p>                

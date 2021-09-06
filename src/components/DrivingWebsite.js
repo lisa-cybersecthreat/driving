@@ -16,23 +16,20 @@ import MustKnow from './MustKnow';
 
 function DrivingWebsite (props) {
     return(
-        // <div>
-            <Router basename="/">
-                <Nav/>
-                <div className="web-wrapper">
-                    <Switch>
-                        <Route exact path="/" component={()=><Home/>} />
-                        <Route exact path="/application" component={()=><Application />}/>  
-                        <Route exact path="/coach" component={()=><Coach/>}/>        
-                        <Route exact path="/mustknow" component={()=><MustKnow/>}/>        
-                        <Route exact path="/retake" component={()=><Retake/>} />     
-                        <Route exact path="/course" component={()=><Course/>} />       
-                    </Switch> 
-                </div>
-                <FooterButton/>   
-            </Router>    
-                
-        // </div>
+        <Router basename="/">
+            <Nav/>
+            <div className="web-wrapper">
+                <Switch>
+                    <Route exact path="/" component={()=><Home/>} />
+                    <Route exact path="/application" component={()=><Application />}/>  
+                    <Route exact path="/coach" component={()=><Coach/>}/>        
+                    <Route exact path="/mustknow" component={()=><MustKnow/>}/>        
+                    <Route exact path="/retake" component={()=><Retake/>} />     
+                    <Route exact path="/course" component={()=><Course/>} />       
+                </Switch> 
+            </div>
+            <FooterButton/>   
+        </Router>    
     )
 }
 

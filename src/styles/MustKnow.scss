@@ -1,0 +1,44 @@
+#MustKnow {
+    section:not(:first-child):not(.link-section) {
+        margin: 1em 0;
+        padding: 1em 1.5em;
+        background: #fff;
+        box-shadow: var(--box-shadow);
+    }
+    .mustknow-detail-div, .qna-section {
+        .each-detail-card {
+            margin: 1em;
+        }
+        .title-div {
+            display: flex;
+            align-items: center;
+            svg {
+                font-size: 3em;
+            }
+            h1 {
+                font-weight: 200;
+            }        
+        }
+
+        p {
+            color: var(--green);
+            border-bottom: 1px solid lightgrey;
+            padding-bottom: .5em;
+        }        
+    }
+    .mustknow-detail-div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    }
+    .link-section {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .mustknow-detail-div {
+        grid-template-columns: 1fr !important;
+    }
+}

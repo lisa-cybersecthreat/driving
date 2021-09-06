@@ -17,27 +17,19 @@ function Application (props) {
         e.preventDefault()
     }
 
-    function clickCarCard(e) {
-        console.log(e)
-        console.log(this)
-    }
-
     return(
         <main id="Application">
             <form>
                 <p>{t("application.take_a_minute_for_feedback")}</p>
                 <label htmlFor="tel">{t("mobile_number")}</label>
                     <input id="tel" type="tel" name="mobile" onChange={onChange} required pattern="^[0-9-+\s()]*$"/>
-                
                 <label htmlFor="name">{t("name")}</label>
                     <input id="name" type="text" name="name" onChange={onChange} />
-                
                 <label htmlFor="email">email</label>
                     <input id="email" type="email" id="email" name="email" required onChange={onChange} />
-                
                 <label htmlFor="cartype">{t("choose_cartype")}</label>
                 <input id="cartype" type="text" name="cartype" style={{display: "none"}}/> 
-                <VariousCarsSec t={t} onClick={clickCarCard}/>
+                <VariousCarsSec t={t}/>
                 <label htmlFor="location"> {t("choose_location")}</label>
                     <select id="location" name="location">
                         {

@@ -25,14 +25,14 @@
                 align-items: center;
                 justify-content: space-between;
                 text-align: center;
-                pointer-events: none;
+                // pointer-events: none;
                 &:hover {
-                    border-color: var(--green);
+                    border-color: var(--green) !important;
                 }
-                &:active, &:focus, &:visited, &:target {
-                    border-color: var(--green);
-                    background-color: #d8e6dd;
-                }
+                // &:active, &:focus, &:visited, &:target, &:checked {
+                //     border-color: var(--green);
+                //     background-color: #d8e6dd;
+                // }
                 p:nth-of-type(2) {
                     display: none;
                 }
@@ -43,6 +43,11 @@
                     margin: 0
                 }
             }
+
+        }
+        .selected {
+            border-color: var(--green) !important;
+            background-color: #d8e6dd;
         }
     }
 }
