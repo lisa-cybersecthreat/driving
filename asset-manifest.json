@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/driving/static/css/main.1b50623b.chunk.css",
-    "main.js": "/driving/static/js/main.832e03df.chunk.js",
-    "main.js.map": "/driving/static/js/main.832e03df.chunk.js.map",
+    "main.css": "/driving/static/css/main.48658fba.chunk.css",
+    "main.js": "/driving/static/js/main.6274d6c5.chunk.js",
+    "main.js.map": "/driving/static/js/main.6274d6c5.chunk.js.map",
     "runtime-main.js": "/driving/static/js/runtime-main.7edce41c.js",
     "runtime-main.js.map": "/driving/static/js/runtime-main.7edce41c.js.map",
     "static/css/2.12638096.chunk.css": "/driving/static/css/2.12638096.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.3d8d91a8.chunk.js.map": "/driving/static/js/3.3d8d91a8.chunk.js.map",
     "index.html": "/driving/index.html",
     "static/css/2.12638096.chunk.css.map": "/driving/static/css/2.12638096.chunk.css.map",
-    "static/css/main.1b50623b.chunk.css.map": "/driving/static/css/main.1b50623b.chunk.css.map",
+    "static/css/main.48658fba.chunk.css.map": "/driving/static/css/main.48658fba.chunk.css.map",
     "static/js/2.aa57fa74.chunk.js.LICENSE.txt": "/driving/static/js/2.aa57fa74.chunk.js.LICENSE.txt",
     "static/media/bus.38ced5a0.png": "/driving/static/media/bus.38ced5a0.png",
     "static/media/car.a099b4b4.jpg": "/driving/static/media/car.a099b4b4.jpg",
@@ -37,7 +37,7 @@
     "static/js/runtime-main.7edce41c.js",
     "static/css/2.12638096.chunk.css",
     "static/js/2.aa57fa74.chunk.js",
-    "static/css/main.1b50623b.chunk.css",
-    "static/js/main.832e03df.chunk.js"
+    "static/css/main.48658fba.chunk.css",
+    "static/js/main.6274d6c5.chunk.js"
   ]
 }
