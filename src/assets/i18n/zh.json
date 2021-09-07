@@ -202,5 +202,13 @@
       "online_test": "線上隨機模擬考",
       "writing_testing": "筆試題庫",
       "duplicate mobile": "手機號碼重覆",
-      "duplicate email": "email重覆"
+      "duplicate email": "email重覆",
+      "forgot password": "忘記密碼",
+      "change password": "修改密碼",
+      "confirm": "確認",
+      "logout": "登出",
+      "password": "密碼",
+      "confirm password": "再輸入一次密碼",
+      "current password": "目前的密碼",
+      "new password": "新密碼"
     }

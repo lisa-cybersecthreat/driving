@@ -56,6 +56,25 @@ function Home (props) {
     const { t, i18n } = useTranslation();
     SwiperCore.use([Pagination,Navigation, Autoplay]);
 
+    const {
+        apiPWReset
+    } = useContext(InitContext)
+    const clickResetBtn = e => {
+        fetch(apiPWReset, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${sessionStorage.getItem("access_token")}`
+            },
+            body: JSON.stringify({email: "bb@bb.com"})
+        })
+        .then(res=>res.json())
+        .then(data=> {
+            console.log(data)
+        })
+        .catch(err => console.error(err))
+    }
+
     // var url = `${apiOrigin}/home`;
     // var url="http://localhost:9000/todos" 
     // var url = "https://sjkcboibmh.execute-api.us-east-1.amazonaws.com/UserAuthentication"
@@ -85,6 +104,7 @@ function Home (props) {
 
     return(
         <main id="home" lang={isEng? "en" : "zh"}>
+            <button onClick={clickResetBtn}>reset</button>
             <section>
                 <Swiper slidesPerView={1} loop={true} pagination={{"clickable": true}} navigation={true} autoplay={{"delay": 5000,"disableOnInteraction": false}} speed={2000} className="hero-slider">
                     <SwiperSlide className="img-wrapper"><img src={car} alt="car"/></SwiperSlide>

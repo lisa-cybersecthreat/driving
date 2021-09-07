@@ -8,7 +8,8 @@ export const InitProvider = (props) => {
     const [apiRegister]=useState("http://testapp.net/api/register")
     const [apiLogin]=useState("http://testapp.net/api/auth/login");
     const [apiLogout]=useState("http://testapp.net/api/auth/logout");
-    const [apiUser]=useState("http://testapp.net/api/user");
+    const [apiMe]=useState("http://testapp.net/api/auth/me"); 
+    const [apiPWReset]=useState("http://testapp.net/password/reset")
     const [apiArticles] = useState("http://testapp.net/api/articles")
     
 
@@ -18,7 +19,8 @@ export const InitProvider = (props) => {
             apiRegister,
             apiLogout,
             apiLogin,
-            apiUser,
+            apiMe,
+            apiPWReset,
             apiArticles,
             isEng, setIsEng
         }}>

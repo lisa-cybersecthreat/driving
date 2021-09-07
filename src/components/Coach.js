@@ -14,19 +14,19 @@ function Coach () {
     const { t, i18n } = useTranslation();
     const [teachers, setTeachers] = useState([])
 
-    useEffect(()=>{
-        fetch(`${apiOrigin}/api/teachers`)
-        .then(res=>{
-            console.log(res)
-            return res.json()
-        })
-        .then(data=>{
-            console.log(data)
-            setTeachers([...teachers, data])
-        })
-        .catch(err=>console.error(err))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    // useEffect(()=>{
+    //     fetch(`${apiOrigin}/api/teachers`)
+    //     .then(res=>{
+    //         console.log(res)
+    //         return res.json()
+    //     })
+    //     .then(data=>{
+    //         console.log(data)
+    //         setTeachers([...teachers, data])
+    //     })
+    //     .catch(err=>console.error(err))
+    // // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [])
 
     return(
         <main id="Coach">

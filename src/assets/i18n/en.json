@@ -204,5 +204,13 @@
     "writing_texting": "writing testing samples",
     "alert_success": "submit successfully",
     "duplicate mobile": "duplicate mobile",
-    "duplicate email": "duplicate email"
+    "duplicate email": "duplicate email",
+    "forgot password": "forgot password",
+    "change password": "change password",
+    "confirm": "confirm",
+    "logout": "logout",
+    "password": "password",
+    "confirm password": "confirm password",
+    "current password": "current password",
+    "new password": "new password"
   }
