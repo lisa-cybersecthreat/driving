@@ -3,6 +3,7 @@ import DrivingWebsite from './components/DrivingWebsite';
 // import { useTranslation, Trans } from 'react-i18next';
 import { InitProvider } from './contexts/InitContext';
 import { FunctionPrivider } from './contexts/functionContext';
+import { DataProvider } from './contexts/dataContext';
 
 function App() {
   // const lngs = {
@@ -13,22 +14,12 @@ function App() {
 
   return (
     <div className="App">
-              {/* <div style={{marginTop: "5em", background: "lightBlue", textAlign: "center"}}>
-          {Object.keys(lngs).map((lng) => (
-            <button key={lng} style={{ fontWeight: i18n.language === lng ? 'bold' : 'normal' }} 
-            type="submit" 
-            onClick={() => i18n.changeLanguage(lng)}>
-              {lngs[lng].nativeName}
-            </button>
-          ))}
-          <h1>{t("he")}</h1>
-          <p><Trans i18nKey="description.part1"></Trans></p>
-          <h1>{t('description.part2')}</h1>
-          </div> */}
           <InitProvider>
+            <DataProvider>
             {/* <FunctionPrivider> */}
               <DrivingWebsite />
-            {/* </FunctionPrivider> */}
+            {/* </FunctionPrivider> */}              
+            </DataProvider>
           </InitProvider>
     </div>
   );

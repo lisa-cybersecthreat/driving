@@ -1,0 +1,23 @@
+#SuccessMsg {
+    padding: 3.5em 1.5em;
+    svg {
+        color: var(--green);
+        font-size: 5em;
+    }
+    button {
+        background: var(--green);
+        padding: 1em 2.5em;
+        border: none;
+        color: #fff;
+        margin: 1em auto;
+        letter-spacing: .15em;
+        cursor: pointer;
+    }
+    * {
+        text-align: center;
+        text-transform: capitalize;
+    }
+    h1 {
+        text-transform: uppercase;
+    }
+}

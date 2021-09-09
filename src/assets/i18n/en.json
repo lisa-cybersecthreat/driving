@@ -212,5 +212,19 @@
     "password": "password",
     "confirm password": "confirm password",
     "current password": "current password",
-    "new password": "new password"
+    "new password": "new password",
+    "regist success": "congratulations, your account has been successfully created",
+    "success": "success",
+    "continue": "continue",
+    "error message": {
+      "the email has already been taken" : "The email has already been taken",
+      "the mobile has already been taken": "The mobile has already been taken",
+      "the password must contain at least one uppercase and one lowercase letter": "The password must contain at least one uppercase and one lowercase letter",
+      "the password confirmation does not match" : "the password confirmation does not match"
+    },
+    "i am a": "i am a",
+    "student": "student",
+    "teacher": "teacher",
+    "password pattern": "password must be at least 8 characters and Mixed characters and number",
+    "my account": "my account"
   }

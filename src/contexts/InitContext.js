@@ -9,10 +9,10 @@ export const InitProvider = (props) => {
     const [apiLogin]=useState("http://testapp.net/api/auth/login");
     const [apiLogout]=useState("http://testapp.net/api/auth/logout");
     const [apiMe]=useState("http://testapp.net/api/auth/me"); 
-    const [apiPWReset]=useState("http://testapp.net/password/reset")
+    const [apiPWReset]=useState("http://testapp.net/api/password/reset");
+    const [apiTeachers] = useState("http://testapp.net/api/teachers")
     const [apiArticles] = useState("http://testapp.net/api/articles")
     
-
     return(
         <InitContext.Provider value={{
             apiOrigin,
@@ -20,6 +20,7 @@ export const InitProvider = (props) => {
             apiLogout,
             apiLogin,
             apiMe,
+            apiTeachers,
             apiPWReset,
             apiArticles,
             isEng, setIsEng

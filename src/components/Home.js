@@ -104,7 +104,7 @@ function Home (props) {
 
     return(
         <main id="home" lang={isEng? "en" : "zh"}>
-            <button onClick={clickResetBtn}>reset</button>
+            {/* <button onClick={clickResetBtn}>reset</button> */}
             <section>
                 <Swiper slidesPerView={1} loop={true} pagination={{"clickable": true}} navigation={true} autoplay={{"delay": 5000,"disableOnInteraction": false}} speed={2000} className="hero-slider">
                     <SwiperSlide className="img-wrapper"><img src={car} alt="car"/></SwiperSlide>

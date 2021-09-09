@@ -210,5 +210,18 @@
       "password": "密碼",
       "confirm password": "再輸入一次密碼",
       "current password": "目前的密碼",
-      "new password": "新密碼"
+      "new password": "新密碼",
+      "regist success": "太棒了，您的帳號已申請成功",
+      "success": "成功",
+      "continue": "繼續",
+      "error message": {
+        "the email has already been taken" : "email信箱已被使用",
+        "the mobile has already been taken": "手機號碼已被使用",
+        "the password must contain at least one uppercase and one lowercase letter": "密碼必須包含至少一個大寫字母及一個小寫字母",
+        "the password confirmation does not match" : "輸入密碼不同"
+      },
+      "i am a": "我是",
+      "student": "學生",
+      "teacher": "老師",
+      "my account": "我的帳戶"
     }
