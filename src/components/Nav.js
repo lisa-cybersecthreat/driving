@@ -173,10 +173,11 @@ function Nav (props) {
         .then(res=>res.json())
         .then(data=>console.log(data))
         .catch(err => console.error(err))  
-        sessionStorage.removeItem("access_token")
-        // window.location.reload()  
-        props.history.push("/") 
-        setIsDropDown(false)
+            sessionStorage.removeItem("access_token")
+            // window.location.reload()  
+            props.history.push("/") 
+            setMe({})
+            setIsDropDown(false)
     }
 
 

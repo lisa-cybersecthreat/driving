@@ -13,7 +13,7 @@ export default function CoachCard (props) {
 
             let sendData = {
                 student_id: props.me.user.id,
-                teacher_id: props.teacher.data[0].id,
+                teacher_id: props.teacher.id,
                 student_name: props.me.user.name,
                 student_mail: props.me.user.email,
                 student_mobile: props.me.user.mobile,
@@ -34,7 +34,17 @@ export default function CoachCard (props) {
                     "Content-Type": "application/app",
                     "Authorization": `Bearer ${sessionStorage.getItem("access_token")}`
                 },
-                body: JSON.stringify({sendData})
+                body: JSON.stringify({
+                    "student_id": 604,
+                    "teacher_id": 3,
+                    "student_name": "zz",
+                    "student_mail": "zz@zz.com",
+                    "student_mobile": "090811759912",
+                    "booking_location": "臺北市",
+                    "booking_date": "2021-09-10T08:32:06.254Z",
+                    "booking_note": "",
+                    "price": ""
+                })
             })
             .then(res=>res.json())
             .then(data=>{
@@ -47,33 +57,37 @@ export default function CoachCard (props) {
     }
 
     return(
-        <div id="CoachCard">
+        <div id="CoachCard" style={{display: props.display}}>
             <form onSubmit={clickTeacher} ref={formRef}>
-                <ul>
-                    <li className="title">name:<span>{props.teacher.data[0].name}</span></li>
-                    <li>mobile:<span>{props.teacher.data[0].mobile}</span></li>
-                    <li>email:<span>{props.teacher.data[0].email}</span></li>
-                    <li>id:<span>{props.teacher.data[0].id}</span></li>                       
-                </ul>
+                <div className="teacher-info-div">
+                    <props.FcBusinessman />
+                    <ul>
+                        <li className="title">name:<span>{props.teacher.name}</span></li>
+                        <li>mobile:<span>{props.teacher.mobile}</span></li>
+                        <li>email:<span>{props.teacher.email}</span></li>
+                        <li>id:<span>{props.teacher.id}</span></li>                       
+                    </ul>                   
+                </div>
+                <div>                
+                    <label>{props.t("choose_location")}
+                        <select name="booking_location">
+                            {
+                                cities.map((city, i)=>
+                                    <option key={`city ${i}`} >{props.i18next==="en" ? city.CityEngName : city.CityName}</option>
+                                    )
+                            }
+                        </select>
+                    </label>
+                    <label>{props.t("price")}
+                        <input name="price" type="number" />
+                    </label>
+                    <label>{props.t("remark")}
+                        <textarea name="booking_note" rows="5" cols="50" maxLength="2000"></textarea>
+                    </label>
+                </div>
 
-                <label>{props.t("choose_location")}
-                    <select name="booking_location">
-                        {
-                            cities.map((city, i)=>
-                                <option key={`city ${i}`} >{props.i18next==="en" ? city.CityEngName : city.CityName}</option>
-                                )
-                        }
-                    </select>
-                </label>
-                <label>{props.t("price")}
-                    <input name="price" type="number" />
-                </label>
-                <label>{props.t("booking note")}
-                    <textarea name="booking_note" rows="5" cols="50" maxLength="2000"></textarea>
-                </label>
                 <button className="button" >{props.t("reservation")}</button>           
             </form>
-            
         </div>
     )
 }
