@@ -25,20 +25,24 @@ function Nav (props) {
         apiRegister,
         apiLogin,
         apiLogout,
+        apiAuthRefresh,
         apiMe,
         apiTeachers,
         isEng, setIsEng 
     } = useContext(InitContext)
     const {
         me, setMe,
-        teachers, setTeachers
+        teachers, setTeachers,
+        isLogin, setIsLogin,
+        isRegister, setIsRegister,
+        isChangePW, setIsChangePW,
+        isDropDown, setIsDropDown
     } = useContext(DataContext)
-    const [isLogin, setIsLogin] = useState(false)
-    const [isRegister, setIsRegister] = useState(false)
-    const [isChangePW, setIsChangePW] = useState(false);
+    // const [isLogin, setIsLogin] = useState(false)
+    // const [isRegister, setIsRegister] = useState(false)
+    // const [isChangePW, setIsChangePW] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false)
-    // const [isEng, setIsEng] = useState(false)
-    const [isDropDown, setIsDropDown] = useState(false)
+    // const [isDropDown, setIsDropDown] = useState(false)
     const [inputData, setInputData] = useState({
         // "name": "zz2",
         // "email": "zz2@zz2.com",
@@ -47,12 +51,15 @@ function Nav (props) {
         // "password": "Zz222222222",
         // "password_confirmation": "Zz222222222"
     })
-    const [alert, setAlert] = useState(null)
-
+    const [alert, setAlert] = useState({})
     const { t, i18n } = useTranslation();
 
     const clickHamburger = () => setIsDropDown(!isDropDown)
     const closeDropDown = () => setIsDropDown(false)
+    const changeInput = (e) => {
+        setAlert({})
+        setInputData({...inputData, [e.target.name] : e.target.value})  
+    }
 
     const clickLoginBtn = (elm, setElm) => {
         closeDropDown()
@@ -73,23 +80,11 @@ function Nav (props) {
     useEffect(()=>{
         const lng = isEng? "en":"zh"
         i18n.changeLanguage(lng)
+
+        if(sessionStorage.getItem("access_token")!==null) FetchApiMe()
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isEng])
-    
-    useEffect(()=>{
-        fetch(apiTeachers)
-        .then(res=> res.json())
-        .then(data=>{
-            console.log(data)
-            setTeachers([...teachers, data])
-        })
-        .catch(err=>console.error(err))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
-    const changeInput = (e) => {
-        setInputData({...inputData, [e.target.name] : e.target.value})  
-    }
 
     const fetchLogin = () => {
         console.log("fetchLogin")
@@ -105,9 +100,12 @@ function Nav (props) {
         .then(res=>res.json())
         .then(data=>{
             console.log(data)
-            sessionStorage.setItem("access_token", data.access_token)
-            closeAllPopup();
-            FetchApiMe();
+            setAlert(data)
+            if(data.access_token!==undefined) {
+                sessionStorage.setItem("access_token", data.access_token)
+                closeAllPopup();
+                FetchApiMe();         
+            } 
         })
         .catch(err => console.error(err))      
     }
@@ -123,7 +121,13 @@ function Nav (props) {
         .then(res=> res.json())
         .then(data=> {
             console.log(data)
-            setMe(data)
+            if(data.user!==undefined){
+                setMe(data)
+            } else {
+                props.history.push("/");
+                setIsLogin(true)
+                sessionStorage.removeItem("access_token")
+            }
         })
         .catch(err=> console.error(err))
     }
@@ -159,11 +163,7 @@ function Nav (props) {
     }
 
     const clickLogoutBtn = async e => { 
-        sessionStorage.removeItem("access_token")
-        // window.location.reload()  
-        await props.history.push("/") 
-
-        fetch(apiLogout, {
+        await fetch(apiLogout, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -172,10 +172,12 @@ function Nav (props) {
         })
         .then(res=>res.json())
         .then(data=>console.log(data))
-        .catch(err => console.error(err))     
+        .catch(err => console.error(err))  
+        sessionStorage.removeItem("access_token")
+        // window.location.reload()  
+        props.history.push("/") 
+        setIsDropDown(false)
     }
-    
-
 
 
     return(
@@ -196,7 +198,7 @@ function Nav (props) {
                         <NavLink exact to="/application" activeClassName="active-link" onClick={closeDropDown}>
                                 <BsPencilSquare />{t("new_application")}
                         </NavLink>
-                        <NavLink exact to="/coach" activeClassName="active-link" onClick={closeDropDown}>
+                        <NavLink exact to="/coach" activeClassName="active-link" onClick={closeDropDown} >
                             <IoPeopleOutline/>{t("coach")}
                         </NavLink>
                         <NavLink exact to="/mustknow" activeClassName="active-link" onClick={closeDropDown} >

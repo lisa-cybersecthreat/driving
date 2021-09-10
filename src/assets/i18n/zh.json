@@ -223,5 +223,7 @@
       "i am a": "我是",
       "student": "學生",
       "teacher": "老師",
-      "my account": "我的帳戶"
+      "my account": "我的帳戶",
+      "email or password inccorect": "email或密碼錯誤",
+      "login successfully": "登入成功"
     }

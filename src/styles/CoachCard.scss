@@ -1,0 +1,14 @@
+#CoachCard {
+        background: #fff;
+        box-shadow: var(--box-shadow);
+        padding: 1em 1.5em;
+        display: flex;
+        form {
+            padding: 0;
+            box-shadow: none;
+            align-items: flex-start;
+        }
+        button {
+            align-self: flex-end;
+        }
+}

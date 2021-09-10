@@ -226,5 +226,7 @@
     "student": "student",
     "teacher": "teacher",
     "password pattern": "password must be at least 8 characters and Mixed characters and number",
-    "my account": "my account"
+    "my account": "my account",
+    "email or password inccorect": "the email or password you entered is incorrect",
+    "login successfully": "login successfully"
   }

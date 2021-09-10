@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import {useTranslation } from 'react-i18next';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -10,9 +10,19 @@ import CoachCard from './coach/CoachCard';
 import { InitContext } from '../contexts/InitContext';
 import { DataContext } from '../contexts/dataContext';
 
-function Coach () {
+function Coach (props) {
     const { t, i18n } = useTranslation();
-    const { teachers, setTeachers} = useContext(DataContext)
+    const { 
+        me, setMe,
+        teachers, setTeachers,
+        isLogin, setIsLogin,
+        isRegister, setIsRegister,
+        isChangePW, setIsChangePW,
+        isDropDown, setIsDropDown
+    } = useContext(DataContext)
+    const {
+        apibookTeacher
+    } = useContext(InitContext)
 
     return(
         <main id="Coach">
@@ -28,8 +38,14 @@ function Coach () {
             </section>
             <section className="coach-cards-div">
                 {
-                    teachers.map(teacher=><CoachCard teacher={teacher} key={uuidv4()} />)
-                    // teachers.map(teacher=>console.log(teacher.data))
+                    teachers.map(teacher=><CoachCard 
+                                            me={me}
+                                            teacher={teacher} 
+                                            key={uuidv4()} 
+                                            setIsLogin={setIsLogin}
+                                            apibookTeacher={apibookTeacher}
+                                            i18n={i18n}
+                                            t={t} />)
                 }
             </section>
         </main>
