@@ -21,10 +21,10 @@ function RegisterPopup(props) {
                         <p className="title">{props.t("register")}</p>
                         {/* <p>{props.t("popup_desc")}</p> */}
                         <label>{props.t("name")} 
-                            <input defaultValue="zz" type="text" name="name" required/>
+                            <input defaultValue="" type="text" name="name" required/>
                         </label>
                         <label>email
-                            <input defaultValue="zz@zz.com" type="email" name="email"  required/>
+                            <input defaultValue="" type="email" name="email"  required/>
                         </label>
                         <label>{props.t("mobile_number")}
                             <input defaultValue="" type="tel" name="mobile"  required pattern="^[0-9-+\s()]*$" />

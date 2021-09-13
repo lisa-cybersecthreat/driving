@@ -151,3 +151,50 @@ footer {
     line-height: 30px;
     height: fit-content;
   }
+
+
+  .marquee {
+    flex-grow: 1;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+   }
+   .marquee p {
+    font-size: 16px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: marquee 9s linear infinite;
+    -webkit-animation: marquee 9s linear infinite;
+    animation: marquee 9s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @-moz-keyframes marquee {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+   }
+   @-webkit-keyframes marquee {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+   }
+   @keyframes marquee {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+   }

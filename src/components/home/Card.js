@@ -9,9 +9,9 @@ function Card (props) {
             <div className="info-div">
                 <h3>{props.title}</h3>
                 <p>{props.desc}</p>
-                <a href="#">
-                    <div className="link-box">{props.link}</div>
-                    <div className="arrow">{">>"}</div>
+                <a href={props.ahref}>
+                    <p className="link-box">{props.link}</p>
+                    <p className="arrow">{">>"}</p>
                 </a> 
             </div>
 

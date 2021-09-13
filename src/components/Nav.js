@@ -186,8 +186,8 @@ function Nav (props) {
             <nav>
                 <section className="logo-div">
                     { !isDropDown  && <>
-                    <img src={logo} alt="logo"/>學開車
-                    {me.user!==undefined && <p>welcome {me.user.name}</p>}
+                        <img src={logo} alt="logo"/>學開車
+                        {me.user!==undefined && <div className="marquee"><p>{t("welcome")} {me.user.name}</p></div>}
                     </> }
                 </section>
                 {!isDropDown && <AiOutlineMenu onClick={clickHamburger} className="hamburger" />}

@@ -37,6 +37,9 @@ nav {
         display: flex;
         align-items: center;
     }
+    .logo-div {
+        flex-grow: 1;
+    }
     .login-div {
         div {
             padding: 0 .5em;

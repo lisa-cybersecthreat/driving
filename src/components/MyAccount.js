@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { InitContext } from "../contexts/InitContext";
 import { Spinner } from "../components/Spinner";
 
+import "../styles/MyAccount.scss";
+
 function MyAccount(props) {
     const { apiPWReset, apiAuthRefresh } = useContext(InitContext);
     const { me, setMe } = useContext(DataContext);
@@ -38,7 +40,7 @@ function MyAccount(props) {
     return(
         <>{
             me.user===undefined ? <Spinner/>: 
-            <main>
+            <main id="MyAccount">
                 myAccount
                 <section>
                     {Object.keys(me.user).map((key, i)=><li key={uuidv4()}>{key}:{Object.values(me.user)[i]}</li>)}

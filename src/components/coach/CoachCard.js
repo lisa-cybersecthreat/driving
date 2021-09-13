@@ -10,7 +10,6 @@ export default function CoachCard (props) {
         e.preventDefault();
 
         if(props.me.user!==undefined){
-
             let sendData = {
                 student_id: props.me.user.id,
                 teacher_id: props.teacher.id,
@@ -35,15 +34,7 @@ export default function CoachCard (props) {
                     "Authorization": `Bearer ${sessionStorage.getItem("access_token")}`
                 },
                 body: JSON.stringify({
-                    "student_id": 604,
-                    "teacher_id": 3,
-                    "student_name": "zz",
-                    "student_mail": "zz@zz.com",
-                    "student_mobile": "090811759912",
-                    "booking_location": "臺北市",
-                    "booking_date": "2021-09-10T08:32:06.254Z",
-                    "booking_note": "",
-                    "price": ""
+                    sendData
                 })
             })
             .then(res=>res.json())
