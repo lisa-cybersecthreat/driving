@@ -10,13 +10,6 @@ import filling_application_form from "../images/filling-application-form.jpg";
 import guys_sitting_car from "../images/guys-sitting-car.jpg"
 import using_digital_tablet_smartphone from "../images/using-digital-tablet-smartphone.jpg";
 import how_much_tuition from "../images/how_much_tuition.jpg"
-// import private_car from "../images/private_car.png";
-// import van from "../images/van.png";
-// import motorcycle from "../images/motorcycle.png";
-// import cargo_truck from "../images/cargo_truck.png";
-// import scooter from "../images/scooter.png";
-// import taxi from "../images/taxi.png";
-// import bus from "../images/bus.png";
 import how_many_classes from "../images/how_many_classes.jpg";
 import where_location from "../images/where_location.jpg";
 import when_upcoming_exame from "../images/when_upcoming_exame.jpg";
@@ -24,7 +17,6 @@ import logo from "../images/logo.png";
 import message from "../images/message.png";
 
 import "../styles/home.scss";
-
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
@@ -59,48 +51,22 @@ function Home (props) {
     const {
         apiPWReset
     } = useContext(InitContext)
-    const clickResetBtn = e => {
-        fetch(apiPWReset, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${sessionStorage.getItem("access_token")}`
-            },
-            body: JSON.stringify({email: "bb@bb.com"})
-        })
-        .then(res=>res.json())
-        .then(data=> {
-            console.log(data)
-        })
-        .catch(err => console.error(err))
-    }
 
-    // var url = `${apiOrigin}/home`;
-    // var url="http://localhost:9000/todos" 
-    // var url = "https://sjkcboibmh.execute-api.us-east-1.amazonaws.com/UserAuthentication"
-    // useEffect(() => {
-    //     fetch(apiArticles, {
-    //         // method: "GET",
-    //         // headers: {
-    //         //     'Content-Type': 'text/html',
-    //         // }
+    // const clickResetBtn = e => {
+    //     fetch(apiPWReset, {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             "Authorization": `Bearer ${sessionStorage.getItem("access_token")}`
+    //         },
+    //         body: JSON.stringify({email: "bb@bb.com"})
     //     })
-    //     // .then(res => {
-    //     //     console.log(res)
-    //     //     console.log(res.headers.get('Content-Type'));
-    //     //     return res.json()
-    //     // })
     //     .then(res=>res.json())
-    //     .then(data => {
+    //     .then(data=> {
     //         console.log(data)
-    //         // console.log(data[0].mobile)
-    //         // console.log(typeof(data))
     //     })
     //     .catch(err => console.error(err))
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [])
-
-
+    // }
 
     return(
         <main id="home" lang={isEng? "en" : "zh"}>

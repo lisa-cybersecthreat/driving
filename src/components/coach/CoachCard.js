@@ -27,15 +27,13 @@ export default function CoachCard (props) {
             console.log("sendData")
             console.log(sendData)
 
-            fetch("props.apibookTeacher", {
+            fetch(props.apibookTeacher, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/app",
+                    "Content-Type": "application/json",
                     "Authorization": `Bearer ${sessionStorage.getItem("access_token")}`
                 },
-                body: JSON.stringify({
-                    sendData
-                })
+                body: JSON.stringify(sendData)
             })
             .then(res=>res.json())
             .then(data=>{

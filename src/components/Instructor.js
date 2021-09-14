@@ -27,24 +27,10 @@ function Instructor (props) {
     } = useContext(InitContext)
     const [searchInputValue, setSearchInputValue] = useState("")
 
-    const changeInput = e => {
-        setSearchInputValue(e.target.value)
-        // // setTeachers(teachers.filter(teacher=>{
-        // //     if(teacher.name.toLowerCase().indexOf(e.target.value.toLowerCase())!==-1)
-        // //     return teacher
-        // // }))
-        // teachers.forEach(teacher=>{
-        //     if(teacher.name.toLowerCase().indexOf(e.target.value.toLowerCase())===-1) setTeachers([{...teacher, style: "none"}])
-        // })
-    }
+    const changeInput = e => setSearchInputValue(e.target.value)
 
-    const onSubmit = e => {
-        e.preventDefault()
-    }
+    const onSubmit = e => e.preventDefault()
 
-    const clickSearchBtn = e => {
-
-    }
 
     return(
         <main id="Coach">
@@ -54,7 +40,7 @@ function Instructor (props) {
             <section className="search-bar-div">
                 <form action="/action_page.php" onSubmit={onSubmit}>
                     <input type="text" placeholder={`${t("search_coach")}...`} name="search" onChange={changeInput} />
-                    <input type="submit" value={t("search")} onClick={clickSearchBtn} />
+                    <input type="submit" value={t("search")}/>
                 </form>
                 <input className="filter-btn" type="submit" value={t("filter")}/>
             </section>
