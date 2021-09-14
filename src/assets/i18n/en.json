@@ -232,5 +232,10 @@
     "price": "price",
     "name included": "name included",
     "welcome": "welcome",
-    "reservation": "reservation"
+    "reservation": "reservation",
+    "booking date": "booking date",
+    "reservation successful": "reservation successful",
+    "booking location": "booking location",
+    "note": "note",
+    "mobile": "mobile"
   }

@@ -9,19 +9,35 @@
             align-items: flex-start;
             flex-direction: row;
             align-items: center;
+            margin: 1em 1.5em;
         }
         button {
             align-self: flex-end;
+            width: 100%;
         }
         .teacher-info-div {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-right: 1em;
             svg {
                 font-size: 5em;
+            }
+            ul {
+                padding: 0;
             }
             li {
                 list-style-type: square;
             }
+        }
+        .reservation-form {
+            .upper-div {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1em;
+            }
+        }
+        select, input {
+            margin: 0;
         }
 }

@@ -66,10 +66,12 @@ function Nav (props) {
         setElm(!elm)
     }
 
-    const closeAllPopup = (e) => {
+    const closeAllPopup = () => {
         setIsLogin(false)
         setIsRegister(false)
         setIsChangePW(false)
+        setIsSuccess(false)
+        setAlert({})
     }
 
     const clickLan = () => {

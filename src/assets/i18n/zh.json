@@ -229,5 +229,10 @@
       "price": "價格",
       "name included": "姓名包含",
       "welcome": "歡迎",
-      "reservation": "預約"
+      "reservation": "預約",
+      "booking date": "預約日期",
+      "reservation successful": "預約成功",
+      "booking location": "預約地點",
+      "note": "備註",
+      "mobile": "手機"
     }

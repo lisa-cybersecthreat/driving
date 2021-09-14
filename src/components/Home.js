@@ -80,7 +80,7 @@ function Home (props) {
             </section>
             <section className="cards-div-3">
                 <Card src={using_digital_tablet_smartphone} title={t("new_application")} desc={t("new_application_desc")} link={t("new_application_link")}/>
-                <Card src={guys_sitting_car} title={t("coach")} desc={t("coach_desc")} link={t("coach_link")} ahref={"#/coach"} />
+                <Card src={guys_sitting_car} title={t("coach")} desc={t("coach_desc")} link={t("coach_link")} ahref={"#/instructor"} />
                 <Card src={filling_application_form} title={t("test")} desc={t("test_desc")} link={t("test_link")}/>
             </section>
             <section className="success-list-section">

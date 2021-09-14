@@ -13,7 +13,8 @@ export const InitProvider = (props) => {
     const [apiTeachers] = useState("http://testapp.net/api/teachers")
     const [apiArticles] = useState("http://testapp.net/api/articles")
     const [apiAuthRefresh] = useState("http://testapp.net/api/auth/refresh")
-    const [apibookTeacher] = useState("http://testapp.net/api/auth/reservation/teacher/submit")
+    const [apiTeacherSubmit] = useState("http://testapp.net/api/auth/reservation/teacher/submit")
+    const [apiExamSubmit] = useState("http://testapp.net/api/auth/reservation/exam/submit")
     
     return(
         <InitContext.Provider value={{
@@ -26,7 +27,8 @@ export const InitProvider = (props) => {
             apiPWReset,
             apiArticles,
             apiAuthRefresh,
-            apibookTeacher,
+            apiTeacherSubmit,
+            apiExamSubmit,
             isEng, setIsEng
         }}>
             <>
