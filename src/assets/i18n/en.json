@@ -230,5 +230,7 @@
     "email or password inccorect": "the email or password you entered is incorrect",
     "login successfully": "login successfully",
     "price": "price",
-    "name included": "name included"
+    "name included": "name included",
+    "welcome": "welcome",
+    "reservation": "reservation"
   }

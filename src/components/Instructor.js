@@ -12,7 +12,7 @@ import CoachCard from './coach/CoachCard';
 import { InitContext } from '../contexts/InitContext';
 import { DataContext } from '../contexts/dataContext';
 
-function Coach (props) {
+function Instructor (props) {
     const { t, i18n } = useTranslation();
     const { 
         me, setMe,
@@ -82,4 +82,4 @@ function Coach (props) {
     )
 }
 
-export default Coach;
+export default Instructor;

@@ -199,7 +199,7 @@ function Nav (props) {
                         <NavLink exact to="/application" activeClassName="active-link" onClick={closeDropDown}>
                                 <BsPencilSquare />{t("new_application")}
                         </NavLink>
-                        <NavLink exact to="/coach" activeClassName="active-link" onClick={closeDropDown} >
+                        <NavLink exact to="/instructor" activeClassName="active-link" onClick={closeDropDown} >
                             <IoPeopleOutline/>{t("coach")}
                         </NavLink>
                         <NavLink exact to="/mustknow" activeClassName="active-link" onClick={closeDropDown} >

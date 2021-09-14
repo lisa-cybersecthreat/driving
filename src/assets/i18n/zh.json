@@ -227,5 +227,7 @@
       "email or password inccorect": "email或密碼錯誤",
       "login successfully": "登入成功",
       "price": "價格",
-      "name included": "姓名包含"
+      "name included": "姓名包含",
+      "welcome": "歡迎",
+      "reservation": "預約"
     }

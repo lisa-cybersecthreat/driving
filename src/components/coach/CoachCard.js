@@ -27,7 +27,7 @@ export default function CoachCard (props) {
             console.log("sendData")
             console.log(sendData)
 
-            fetch(props.apibookTeacher, {
+            fetch("props.apibookTeacher", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/app",
