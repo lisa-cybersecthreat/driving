@@ -2,12 +2,15 @@ function LoginPopup(props) {
 
     const onKeyDown = e => e.keyCode===13 && e.preventDefault()
     return (
-        <div className="login-popup">
+        <div className="login-popup" id="LoginPopup">
             <div className="overlay"></div>
             <form onSubmit={props.onSubmit}>
                 <button className="close" onClick={props.closeAllPopup}></button>
-                <p className="title">{props.t("login")}</p>
-                {/* <p>{props.t("popup_desc")}</p> */}
+                <div style={{textAlign: "center"}}>
+                    <props.IoPersonCircle />
+                    <p className="title">{props.t("login")}</p>
+                    {/* <p>{props.t("popup_desc")}</p> */}                    
+                </div>
                 <input type="email" name="email" placeholder="email"  onKeyDown={onKeyDown} onChange={props.onChange} required />
                 <input type="password" name="password" placeholder={props.t("password")}  onKeyDown={onKeyDown} onChange={props.onChange} required autoComplete="off" />
                 <input type="submit" value={props.t("next")} />

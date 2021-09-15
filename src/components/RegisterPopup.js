@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import SuccessMsg from './SuccessMsg';
+import cities from "../assets/cities.json"
 
 function RegisterPopup(props) {
     const formRef=useRef()
@@ -41,6 +42,15 @@ function RegisterPopup(props) {
                             <input id="teacher" type="radio" name="role" value="teacher"/>
                             <label htmlFor="teacher">{props.t("teacher")}</label>                      
                         </div> */}
+                        {/* <label>{props.t("choose_location")}
+                            <select name="location" defaultValue="">
+                                {
+                                    cities.map((city, i)=>
+                                        <option key={`city ${i}`} >{props.i18next==="en" ? city.CityEngName : city.CityName}</option>
+                                        )
+                                }
+                            </select>
+                        </label> */}
                         <label>{props.t("password")}
                             <input defaultValue="" type="password" name="password"  required autoComplete="off" />
                         </label>

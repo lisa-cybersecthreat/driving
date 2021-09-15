@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import {AiOutlineHome, AiOutlineMenu, AiOutlineLogout, AiOutlineExclamationCircle, AiFillExclamationCircle} from 'react-icons/ai';
 import {BsPencilSquare} from 'react-icons/bs';
-import {IoPeopleOutline, IoLanguageOutline} from 'react-icons/io5'
+import {IoPeopleOutline, IoLanguageOutline, IoPersonCircle} from 'react-icons/io5'
 import {BiCalendarPlus, BiCheck} from 'react-icons/bi'
 import {GiCartwheel} from 'react-icons/gi'
 import {FaJava, FaRegUserCircle, FaAddressBook, FaUserCog} from 'react-icons/fa'
@@ -63,6 +63,7 @@ function Nav (props) {
 
     const clickLoginBtn = (elm, setElm) => {
         closeDropDown()
+        closeAllPopup()
         setElm(!elm)
     }
 
@@ -138,6 +139,7 @@ function Nav (props) {
         e.preventDefault();
 
         var numberPattern = /\d+/g;
+        console.log({...inputData, mobile: inputData.mobile.match(numberPattern).join().replaceAll(",", "")})
 
         fetch(apiRegister, {
             method: "POST",
@@ -189,7 +191,7 @@ function Nav (props) {
                 <section className="logo-div">
                     { !isDropDown  && <>
                         <img src={logo} alt="logo"/>學開車
-                        {me.user!==undefined && <div className="marquee"><p>{t("welcome")} {me.user.name}</p></div>}
+                        {me.user!==undefined && <div className="marquee"><p>{t("welcome")}p{t("login")} {me.user.name}</p></div>}
                     </> }
                 </section>
                 {!isDropDown && <AiOutlineMenu onClick={clickHamburger} className="hamburger" />}
@@ -263,6 +265,7 @@ function Nav (props) {
                         onSubmit={submitLogin}
                         alert={alert}
                         setIsChangePW={setIsChangePW}
+                        IoPersonCircle={IoPersonCircle}
                     />
                 }
                 {
