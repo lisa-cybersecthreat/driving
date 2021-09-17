@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function EachCarCard (props) {
     const [selected, setSelected] = useState(false)
@@ -9,7 +9,7 @@ function EachCarCard (props) {
     }
 
     return(
-        <a href="#" onClick={onClick} className={selected? "selected card" : "card"}>
+        <a href="#" onClick={onClick} className={selected? "selected card" : "card"} data-cartype={props.title}>
             <div>
                 <p>{props.title}</p>
                 <p>{props.courses}</p>                
