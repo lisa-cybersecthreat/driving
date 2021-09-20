@@ -17,7 +17,6 @@ function Application (props) {
 
     const [image, setImage] = useState(null)
     const [file, setFile] = useState(null)
-    
 
     const changeLocation = e => setLocation1(e.target.value)
 
@@ -35,31 +34,29 @@ function Application (props) {
         console.log(data)
 
 
-        console.log(e.target.files)
-        var reader = new FileReader()
-        reader.onload= function(e){
-            
-            // console.log(e.target.result)
-            setImage(e.target.result)
-        }
-        reader.readAsDataURL(formData.file)
+        // console.log(e.target.files)
+        // var reader = new FileReader()
+        // reader.onload= function(e){
+        //     setImage(e.target.result)
+        // }
+        // reader.readAsDataURL(formData.file)
     }
     
-    const chooseImage = e => {
-        console.log(e.target.files[0])
-    }
+    // const chooseImage = e => {
+    //     console.log(e.target.files[0])
+    // }
 
     return(
         <main id="Application">
             <form onSubmit={onSubmit} ref={formRef}>
                 <p>{t("application.take_a_minute_for_feedback")}</p>
-                {/* <label htmlFor="name">{t("name")}</label>
+                <label htmlFor="name">{t("name")}</label>
                     <input id="name" type="text" name="name" />
                 <label htmlFor="tel">{t("mobile_number")}</label>
                     <input id="tel" type="tel" name="mobile"   required pattern="^[0-9-+\s()]*$"/>
                 <label htmlFor="email">email</label>
                     <input id="email" type="email" name="email" required />
-                <label htmlFor="cartype">{t("choose_cartype")}</label> */}
+                <label htmlFor="cartype">{t("choose_cartype")}</label>
                 <input id="cartype" type="text" name="cartype" style={{display: "none"}}/> 
                 <VariousCarsSec t={t} selectedCars={selectedCars} setSelectedCars={setSelectedCars} submitForm={submitForm} />
                 <label htmlFor="location1"> {t("choose_location")}</label>
