@@ -13,7 +13,10 @@ function MyAccount(props) {
     const fetchPWReset = e => {
         fetch(apiPWReset, {
             method: "GET",
-            Authorization: `Bearer ${sessionStorage.getItem("session_token")}`
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${sessionStorage.getItem("session_token")}`
+            }
         })      
         .then(res=>res.json())
         .then(data=>{
@@ -43,7 +46,7 @@ function MyAccount(props) {
             <main id="MyAccount">
                 myAccount
                 <section>
-                    {Object.keys(me.user).map((key, i)=><li key={uuidv4()}>{key}:{Object.values(me.user)[i]}</li>)}
+                    {Object.keys(me.user).map((key, i)=><li key={uuidv4()}><span>{key}</span>:<span>{Object.values(me.user)[i]}</span></li>)}
                 </section>
                 <button onClick={fetchPWReset}>reset password</button>
             </main>     

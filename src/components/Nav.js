@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useLayoutEffect, useRef, useState } from 'react';
 import {NavLink, withRouter} from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
@@ -38,19 +38,8 @@ function Nav (props) {
         isChangePW, setIsChangePW,
         isDropDown, setIsDropDown
     } = useContext(DataContext)
-    // const [isLogin, setIsLogin] = useState(false)
-    // const [isRegister, setIsRegister] = useState(false)
-    // const [isChangePW, setIsChangePW] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false)
-    // const [isDropDown, setIsDropDown] = useState(false)
-    const [inputData, setInputData] = useState({
-        // "name": "zz2",
-        // "email": "zz2@zz2.com",
-        // "mobile": "090811759922222",
-        // "role": "teacher",
-        // "password": "Zz222222222",
-        // "password_confirmation": "Zz222222222"
-    })
+    const [inputData, setInputData] = useState({})
     const [alert, setAlert] = useState({})
     const { t, i18n } = useTranslation();
 
@@ -80,7 +69,7 @@ function Nav (props) {
         setIsEng(!isEng)
     }
 
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         const lng = isEng? "en":"zh"
         i18n.changeLanguage(lng)
 

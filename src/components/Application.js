@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import {useTranslation} from "react-i18next"
 import { v4 as uuidv4 } from 'uuid';
 import VariousCarsSec from './home/VariousCarsSec';
@@ -18,7 +18,7 @@ function Application (props) {
     const [image, setImage] = useState(null)
     const [file, setFile] = useState(null)
 
-    const changeLocation = e => setLocation1(e.target.value)
+    // const changeLocation = e => setLocation1(e.target.value)
 
     const clickSubmitBtn = e => setSumitForm(!submitForm)
 
@@ -33,21 +33,21 @@ function Application (props) {
         console.log("formdata and data: ")
         console.log(data)
 
-
-        // console.log(e.target.files)
-        // var reader = new FileReader()
-        // reader.onload= function(e){
-        //     setImage(e.target.result)
-        // }
-        // reader.readAsDataURL(formData.file)
+        console.log(e.target.files)
+        var reader = new FileReader()
+        reader.onload= function(e){
+            setImage(e.target.result)
+        }
+        reader.readAsDataURL(formData.file)
     }
-    
-    // const chooseImage = e => {
-    //     console.log(e.target.files[0])
-    // }
+
+    const chooseImage = e => {
+        console.log(e.target.files[0])
+    }
 
     return(
         <main id="Application">
+            {console.log("run return")}
             <form onSubmit={onSubmit} ref={formRef}>
                 <p>{t("application.take_a_minute_for_feedback")}</p>
                 <label htmlFor="name">{t("name")}</label>
@@ -60,27 +60,28 @@ function Application (props) {
                 <input id="cartype" type="text" name="cartype" style={{display: "none"}}/> 
                 <VariousCarsSec t={t} selectedCars={selectedCars} setSelectedCars={setSelectedCars} submitForm={submitForm} />
                 <label htmlFor="location1"> {t("choose_location")}</label>
-                    <select id="location1" name="location1" ref={location1OptionRef} onChange={changeLocation} value={location1}>
+                    <select id="location1" name="location1" ref={location1OptionRef} onChange={ e =>setLocation1(e.target.value)} value={location1}>
                         <option value=""></option>
                         {
                             cities.map((c, i)=> <option key={uuidv4()} value={i18n.language==="en"? c.CityEngName : c.CityName} data-i={i}>{i18n.language==="en"? c.CityEngName : c.CityName}</option>)
                         }                
                     </select>
-                    {
-                        location1.length>0 && <select name="location2" ref={location2OptionRef} >
+                    { location1.length>0 && 
+                        <select name="location2" ref={location2OptionRef} >
                             {
                                 cities[location1OptionRef.current.selectedIndex-1].AreaList.map(area=>
                                 <option value={i18n.language==="en" ? `${area.ZipCode}-${area.AreaEngName}` : `${area.ZipCode}-${area.AreaName}`} key={uuidv4()}>{area.ZipCode}-{i18n.language==="en" ? area.AreaEngName : area.AreaName}</option>)        
                             }
-                        </select>
-                    }    
+                        </select>}    
                 <label htmlFor="remark">{t("remark")}</label>
                     <textarea id="remark"></textarea>
                 <input type="submit" value={t("next")} onClick={clickSubmitBtn}/>
-                {/* <label>upload image:
+
+                <label>upload image:
+                <progress id="file" max="100" value="70"> 70% </progress>
                     <input type="file" name="file" accept="image/*" onChange={chooseImage}/>
                 </label>   
-                <img src={image} alt="file" />  */}
+                <img src={image} alt="file" /> 
                 {/* <p>{t("no_mobile")}<a href="#">{t("contact_with_us")} {">>"}</a></p> */}
             </form> 
         </main>

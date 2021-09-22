@@ -13,8 +13,8 @@ import EachCarCard from './EachCarCard';
 export default function VariousCarsSec(props) {
     const divRef = useRef();
 
-    useEffect(()=>{
-        console.log("various cars sec")
+    useEffect(()=>{console.log("various cars sec")
+        if(props.submitForm===undefined) return
         console.log(divRef)
         let arr=[]
         divRef.current.childNodes.forEach(elm=>{
@@ -26,10 +26,8 @@ export default function VariousCarsSec(props) {
             }
         })
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.submitForm])
-
-
-
 
     return(
         <section className="various-cars-sec" >
